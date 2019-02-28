@@ -1,0 +1,49 @@
+import React from "react";
+
+const Item = ({
+  name,
+  description,
+  imgUrl,
+  price,
+  qty,
+  likes,
+  isLiked,
+  category
+}) => {
+  return (
+    <div class="br3 ba bg-near-white b--light-red mw5 center ma3 shadow-5 bw3 ">
+      <div className="ba ph2 pb2 b--washed-red bw3">
+        <h3 className="f6 mb0 tc ttu">{category}</h3>
+        <hr className="mt0 w-30 center" />
+        <img
+          src={imgUrl}
+          className="w-100 flex dib center bg-light-gray shadow-2 br-100 ba bw2 b--moon-gray"
+          alt={name}
+        />
+
+        <div className="f3 fw7 flex mt3">
+          <div>{name}</div>
+        </div>
+
+        <p class="f5 lh-copy dark-gray mt1">{description}</p>
+        <hr className="mt0 w-80 center" />
+        <div className="flex justify-between fw7">
+          <button className="w-30 f3 br2 bg-near-white pointer flex justify-around grow">
+            <strong>{price}</strong>
+            <img
+              src="\img\PokéCoin.png"
+              alt="pokecoin"
+              className="w-50 br-100"
+            />
+          </button>
+          <span className="f4 self-center">
+            {likes}
+            <i class="fas fa-heart hover-red red pointer grow-large" />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Item;
