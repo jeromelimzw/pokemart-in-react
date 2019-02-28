@@ -11,13 +11,13 @@ const Item = ({
   category
 }) => {
   return (
-    <div class="br3 ba bg-near-white b--light-red mw5 center ma3 shadow-5 bw3 ">
-      <div className="ba ph2 pb2 b--washed-red bw3">
+    <div class="br3 ba bg-near-white b--light-red w-20 ma0 shadow-5 bw3 ma2">
+      <div className="ba ph2 pb2 b--washed-red bw3 ma0">
         <h3 className="f6 mb0 tc ttu">{category}</h3>
-        <hr className="mt0 w-30 center" />
+        <hr className="mt1 w-30 center" />
         <img
           src={imgUrl}
-          className="w-100 flex dib center bg-light-gray shadow-2 br-100 ba bw2 b--moon-gray"
+          className="w-100 bg-light-gray shadow-5 br-100 ba bw2 b--moon-gray"
           alt={name}
         />
 
@@ -38,7 +38,11 @@ const Item = ({
           </button>
           <span className="f4 self-center">
             {likes}
-            <i class="fas fa-heart hover-red red pointer grow-large" />
+            <i
+              class={`${
+                isLiked ? "fas" : "far"
+              } fa-heart hover-red red pointer grow-large`}
+            />
           </span>
         </div>
       </div>

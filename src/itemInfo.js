@@ -1,7 +1,7 @@
 const items = [
   {
     _id: 23432,
-    name: "PokeBall",
+    name: "Poké Ball",
     description:
       "A device for capturing wild Pokémon. It's thrown like a ball at a Pokémon, comfortably encapsulating its target.",
     imgUrl: "img/Balls/Poké_Ball.png",
@@ -22,7 +22,7 @@ const items = [
     price: 5,
     qty: 6,
     likes: 9,
-    isLiked: false,
+    isLiked: true,
     onDisplay: true,
     category: "PokéBalls",
     minStock: 3

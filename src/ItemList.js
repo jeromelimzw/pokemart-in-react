@@ -4,7 +4,7 @@ import items from "./itemInfo";
 
 const ItemList = () => {
   return (
-    <div className="flex">
+    <div className="flex flex-end">
       {items.map(item => (
         <Item
           key={item._id}
@@ -18,7 +18,6 @@ const ItemList = () => {
           category={item.category}
         />
       ))}
-      }
     </div>
   );
 };
