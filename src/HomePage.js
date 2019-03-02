@@ -71,7 +71,7 @@ class HomePage extends Component {
           handleAddCart={handleAddCart}
           categoryfilter={categoryfilter}
         />
-        <CartPanel />
+        <CartPanel items={items} />
       </div>
     );
   }
