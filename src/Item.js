@@ -9,7 +9,8 @@ const Item = ({
   likes,
   isLiked,
   category,
-  color
+  color,
+  toggleLike
 }) => {
   return (
     <div
@@ -45,11 +46,12 @@ const Item = ({
             {qty === 0 ? "-OUT OF STOCK-" : `${qty} left`}
           </span>
           <span className="f4 self-center">
-            {likes}
+            {isLiked ? likes + 1 : likes}
             <i
               className={`${
                 isLiked ? "fas" : "far"
               } fa-heart hover-red red pointer grow-large`}
+              onClick={toggleLike}
             />
           </span>
         </div>

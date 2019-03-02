@@ -4,6 +4,7 @@ import FilterAndSort from "./FilterAndSort";
 import CartPanel from "./CartPanel";
 import items from "./itemInfo";
 import categories from "./categoryInfo";
+import _ from "lodash";
 
 class HomePage extends Component {
   constructor(props) {
@@ -19,9 +20,19 @@ class HomePage extends Component {
     console.log(this.state.searchfield);
   };
 
+  toggleLike = tarId => {
+    let nextState = _.cloneDeep(this.state.items);
+    nextState = nextState.map(item => {
+      return item._id === tarId
+        ? Object.assign({}, item, { isLiked: !item.isLiked })
+        : item;
+    });
+    this.setState({ items: nextState });
+  };
+
   render() {
     const { categories, items, searchfield } = this.state;
-    const { handleSearch } = this;
+    const { handleSearch, toggleLike } = this;
     return (
       <div className="flex w-90 center justify-between animated fadeIn">
         <FilterAndSort categories={categories} handleSearch={handleSearch} />
@@ -29,6 +40,7 @@ class HomePage extends Component {
           items={items}
           categories={categories}
           searchfield={searchfield}
+          toggleLike={toggleLike}
         />
         <CartPanel />
       </div>

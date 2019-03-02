@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemList = ({ items, categories, searchfield }) => {
+const ItemList = ({ items, categories, searchfield, toggleLike }) => {
   const filteredItems = items.filter(a =>
     a.name.toLowerCase().includes(searchfield.toLowerCase())
   );
@@ -24,6 +24,7 @@ const ItemList = ({ items, categories, searchfield }) => {
               isLiked={item.isLiked}
               category={categories.find(a => a._id === item.categoryId).name}
               color={categories.find(a => a._id === item.categoryId).color}
+              toggleLike={() => toggleLike(item._id)}
             />
           ))}
       </div>
