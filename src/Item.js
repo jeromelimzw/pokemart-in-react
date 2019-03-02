@@ -10,7 +10,8 @@ const Item = ({
   isLiked,
   category,
   color,
-  toggleLike
+  toggleLike,
+  handleAddCart
 }) => {
   return (
     <div
@@ -33,7 +34,10 @@ const Item = ({
         </div>
         <div className="flex justify-between fw6 mb2">
           {qty !== 0 && (
-            <button className="w-40 f3 br2 bg-near-white pointer flex justify-around shadow-5 pv1">
+            <button
+              className="w-40 f3 br2 bg-near-white pointer flex justify-around shadow-5 pv1"
+              onClick={handleAddCart}
+            >
               <strong className="self-center">{price}</strong>
               <img
                 src="\img\PokéCoin.png"
