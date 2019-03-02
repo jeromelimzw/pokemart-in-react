@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import HomePage from "./HomePage";
 import NavBar from "./NavBar";
 
 class App extends Component {
@@ -7,7 +6,6 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <HomePage />
       </div>
     );
   }
