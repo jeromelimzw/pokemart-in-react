@@ -15,14 +15,14 @@ const Item = ({
 }) => {
   return (
     <div
-      className={`br3 ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2`}
+      className={`br3 ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2 animated fadeIn`}
     >
       <h3 className={`f6 mb0 mt2 tc ttu ${color}`}>{category}</h3>
       <hr className="mt1 w-30 center" />
 
       <img
         src={imgUrl}
-        className="w-90 bg-light-gray ba br-100 b--moon-gray shadow-5 bw2 grow-large pointer"
+        className="w-90 bg-light-gray ba br-100 b--moon-gray shadow-5 bw2 grow-large pointer ml1"
         alt={name}
       />
 

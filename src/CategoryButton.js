@@ -1,12 +1,14 @@
 import React from "react";
 
-const CategoryButton = ({ name, imgUrl, color }) => {
+const CategoryButton = ({ id, imgUrl, color, handleCategory }) => {
   return (
     <span>
       <img
-        className={`w-40 pa0 ma2 ba br3 bg-near-white b--${color} pointer shadow-5 bw2 hide-child grow`}
+        className={`w-40 pa0 ma2 ba br3 bg-near-white b--${color} pointer shadow-5 bw2 grow`}
         src={imgUrl}
         alt="category"
+        id={id}
+        onClick={handleCategory}
       />
     </span>
   );

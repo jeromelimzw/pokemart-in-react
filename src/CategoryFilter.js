@@ -1,7 +1,7 @@
 import React from "react";
 import CategoryButton from "./CategoryButton";
 
-const CategoryFilter = ({ categories }) => {
+const CategoryFilter = ({ categories, handleCategory }) => {
   return (
     <div>
       <span className="ma0 f3">CATEGORIES</span>
@@ -9,10 +9,11 @@ const CategoryFilter = ({ categories }) => {
       {categories.map(a => {
         return (
           <CategoryButton
+            id={a._id}
             key={a._id}
-            name={a.name}
             imgUrl={a.imgUrl}
             color={a.color}
+            handleCategory={handleCategory}
           />
         );
       })}{" "}

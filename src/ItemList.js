@@ -6,15 +6,17 @@ const ItemList = ({
   categories,
   searchfield,
   toggleLike,
-  handleAddCart
+  handleAddCart,
+  categoryfilter
 }) => {
-  const filteredItems = items.filter(a =>
-    a.name.toLowerCase().includes(searchfield.toLowerCase())
-  );
+  const filteredItems = items
+    .filter(a => a.name.toLowerCase().includes(searchfield.toLowerCase()))
+    .filter(a => a.categoryId.includes(categoryfilter));
+
   const length = filteredItems.length;
 
   return (
-    <div className="w-70 ml5">
+    <div className="w-70 ml5 animated fadeIn">
       <span className=" f4">
         {length === 0
           ? `No results found for ${searchfield} ...`

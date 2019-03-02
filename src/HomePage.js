@@ -9,7 +9,12 @@ import _ from "lodash";
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = { items: [], categories: [], searchfield: "" };
+    this.state = {
+      items: [],
+      categories: [],
+      searchfield: "",
+      categoryfilter: ""
+    };
   }
   componentDidMount() {
     this.setState({ items, categories });
@@ -17,7 +22,12 @@ class HomePage extends Component {
 
   handleSearch = event => {
     this.setState({ searchfield: event.target.value });
-    console.log(this.state.searchfield);
+  };
+
+  handleCategory = event => {
+    this.state.categoryfilter === event.target.id
+      ? this.setState({ categoryfilter: "" })
+      : this.setState({ categoryfilter: event.target.id });
   };
 
   toggleLike = tarId => {
@@ -44,17 +54,22 @@ class HomePage extends Component {
   };
 
   render() {
-    const { categories, items, searchfield } = this.state;
-    const { handleSearch, toggleLike, handleAddCart } = this;
+    const { categories, items, searchfield, categoryfilter } = this.state;
+    const { handleSearch, toggleLike, handleAddCart, handleCategory } = this;
     return (
       <div className="flex w-90 center justify-between animated fadeIn">
-        <FilterAndSort categories={categories} handleSearch={handleSearch} />
+        <FilterAndSort
+          categories={categories}
+          handleSearch={handleSearch}
+          handleCategory={handleCategory}
+        />
         <ItemList
           items={items}
           categories={categories}
           searchfield={searchfield}
           toggleLike={toggleLike}
           handleAddCart={handleAddCart}
+          categoryfilter={categoryfilter}
         />
         <CartPanel />
       </div>
