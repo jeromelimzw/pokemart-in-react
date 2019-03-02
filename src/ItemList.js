@@ -1,12 +1,16 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemList = ({ items, categories }) => {
+const ItemList = ({ items, categories, searchfield }) => {
+  const filteredItems = items.filter(a =>
+    a.name.toLowerCase().includes(searchfield.toLowerCase())
+  );
+
   return (
     <div className="w-70 ml5">
-      <span className=" f4">displaying {items.length} items ...</span>
+      <span className=" f4">displaying {filteredItems.length} items ...</span>
       <div className="flex flex-wrap">
-        {items
+        {filteredItems
           .sort((a, b) => b.likes - a.likes)
           .map(item => (
             <Item

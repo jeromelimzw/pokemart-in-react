@@ -1,5 +1,5 @@
 const RandGen = () => {
-  return Math.round(Math.random() * 30 + 1);
+  return Math.round(Math.random() * 20);
 };
 
 const items = [

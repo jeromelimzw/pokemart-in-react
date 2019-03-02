@@ -1,12 +1,15 @@
 import React from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ handleSearch }) => {
   return (
-    <div>
+    <div className="mb4">
+      <span className="ma0 f3">SEARCH</span>
+      <hr className="w-40 ma1 mb3 center" />
       <input
         type="searchbar"
         placeholder="🔍 items here..."
-        className=" tc b--gray f3 bw2 bg-light-gray flex pv2 mt4 ph6 shadow-5"
+        className=" tc f3 bw1 bg-near-white w-90 shadow-5 pv2 dim "
+        onChange={handleSearch}
       />
     </div>
   );

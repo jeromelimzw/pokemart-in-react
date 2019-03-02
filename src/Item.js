@@ -31,15 +31,19 @@ const Item = ({
           <hr className="mt0 w-80 center" />
         </div>
         <div className="flex justify-between fw6 mb2">
-          <button className="w-40 f3 br2 bg-near-white pointer flex justify-around shadow-5 pv1">
-            <strong className="self-center">{price}</strong>
-            <img
-              src="\img\PokéCoin.png"
-              alt="pokecoin"
-              className="w-50 br-100"
-            />
-          </button>
-          <span className="f5 gray self-center">{qty} left</span>
+          {qty !== 0 && (
+            <button className="w-40 f3 br2 bg-near-white pointer flex justify-around shadow-5 pv1">
+              <strong className="self-center">{price}</strong>
+              <img
+                src="\img\PokéCoin.png"
+                alt="pokecoin"
+                className="w-50 br-100"
+              />
+            </button>
+          )}
+          <span className="f5 gray self-center">
+            {qty === 0 ? "-OUT OF STOCK-" : `${qty} left`}
+          </span>
           <span className="f4 self-center">
             {likes}
             <i
