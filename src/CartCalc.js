@@ -1,13 +1,12 @@
 import React from "react";
 
-const CartCalc = ({ totalItems, items, handleRemove }) => {
-  const cartItems = items.filter(a => a.qtyCart !== 0);
+const CartCalc = ({ items, handleRemove }) => {
   const totalCost = items.reduce((a, b) => a + b.qtyCart * b.price, 0);
   return (
     <div className="pv3 f5 ph1 animated fadeIn">
       <table className="tl w-100 h-25 fw6">
         <tbody>
-          {cartItems.map(a => {
+          {items.map(a => {
             return (
               <React.Fragment key={a._id}>
                 <tr className="animated fadeIn">

@@ -4,6 +4,7 @@ import CartCalc from "./CartCalc";
 
 const CartPanel = ({ items, handleRemove }) => {
   const totalInCart = items.reduce((a, b) => a + b.qtyCart, 0);
+  const cartItems = items.filter(a => a.qtyCart !== 0);
 
   return (
     <div className="w-25 h-50 bg-white pv3 tc br3 shadow-5">
@@ -15,18 +16,20 @@ const CartPanel = ({ items, handleRemove }) => {
           alt="empty-cart"
         />
       ) : (
-        <CartCalc
-          totalItems={totalInCart}
-          items={items}
-          handleRemove={handleRemove}
-        />
+        <React.Fragment>
+          <CartCalc
+            totalItems={totalInCart}
+            items={cartItems}
+            handleRemove={handleRemove}
+          />
+          <Link
+            to={{ pathname: "/checkout", state: { cartItems } }}
+            className="f5 shadow-5 dim tc grow self-center pointer ph4 pv1 white br3 bg-green no-underline"
+          >
+            PROCEED TO CART
+          </Link>
+        </React.Fragment>
       )}
-      <Link
-        to="/checkout"
-        className="f5 shadow-5 dim tc grow self-center pointer ph4 pv1 white br3 bg-green no-underline"
-      >
-        PROCEED TO CART
-      </Link>
     </div>
   );
 };
