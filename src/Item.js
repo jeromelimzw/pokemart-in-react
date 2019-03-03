@@ -10,7 +10,7 @@ const Item = ({
   isLiked,
   category,
   color,
-  toggleLike,
+  toggleLikes,
   handleAddCart
 }) => {
   return (
@@ -48,12 +48,12 @@ const Item = ({
           )}
           <span className="f5 gray self-center">{`${qty} left`}</span>
           <span className="f4 self-center">
-            {isLiked ? likes + 1 : likes}
+            {likes}
             <i
               className={`${
                 isLiked ? "fas" : "far"
               } fa-heart hover-red red pointer grow-large`}
-              onClick={toggleLike}
+              onClick={toggleLikes}
             />
           </span>
         </div>

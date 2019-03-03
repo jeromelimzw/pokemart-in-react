@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import ItemList from "./ItemList";
 import FilterAndSort from "./FilterAndSort";
 import CartPanel from "./CartPanel";
-import items from "./static/itemInfo";
-import categories from "./static/categoryInfo";
+import { getItems, toggleLikes } from "./static/itemInfo";
+import { getCategories } from "./static/categoryInfo";
 import _ from "lodash";
 
 class HomePage extends Component {
@@ -18,8 +18,13 @@ class HomePage extends Component {
     };
   }
   componentDidMount() {
-    this.setState({ items, categories });
+    this.setState({ items: getItems(), categories: getCategories() });
   }
+
+  toggleLikes = tarId => {
+    toggleLikes(tarId);
+    this.setState({ items: getItems() });
+  };
 
   handleSortBy = event => {
     this.setState({ sorting: event.target.value });
@@ -36,24 +41,14 @@ class HomePage extends Component {
       : this.setState({ categoryfilter: event.target.id });
   };
 
-  toggleLike = tarId => {
-    let nextState = _.cloneDeep(this.state.items);
-    nextState = nextState.map(item => {
-      return item._id === tarId
-        ? Object.assign({}, item, { isLiked: !item.isLiked })
-        : item;
-    });
-    this.setState({ items: nextState });
-  };
-
   handleAddCart = tarId => {
     let nextState = _.cloneDeep(this.state.items);
     nextState = nextState.map(item => {
       return item._id === tarId
         ? Object.assign({}, item, {
-          qtyStock: item.qtyStock - 1,
-          qtyCart: item.qtyCart + 1
-        })
+            qtyStock: item.qtyStock - 1,
+            qtyCart: item.qtyCart + 1
+          })
         : item;
     });
     this.setState({ items: nextState });
@@ -64,9 +59,9 @@ class HomePage extends Component {
     nextState = nextState.map(item => {
       return item._id === tarId
         ? Object.assign({}, item, {
-          qtyStock: item.qtyStock + item.qtyCart,
-          qtyCart: 0
-        })
+            qtyStock: item.qtyStock + item.qtyCart,
+            qtyCart: 0
+          })
         : item;
     });
     this.setState({ items: nextState });
@@ -81,7 +76,6 @@ class HomePage extends Component {
     } = this.state;
     const {
       handleSearch,
-      toggleLike,
       handleAddCart,
       handleCategory,
       handleRemoveFromCart,
@@ -99,7 +93,7 @@ class HomePage extends Component {
           items={items}
           categories={categories}
           searchfield={searchfield}
-          toggleLike={toggleLike}
+          toggleLikes={toggleLikes}
           handleAddCart={handleAddCart}
           categoryfilter={categoryfilter}
           sorting={sorting}

@@ -41,4 +41,6 @@ const cardInfo = [
   }
 ];
 
-export default cardInfo;
+export function getCardInfo() {
+  return cardInfo;
+}

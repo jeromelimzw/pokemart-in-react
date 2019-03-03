@@ -5,7 +5,7 @@ const ItemList = ({
   items,
   categories,
   searchfield,
-  toggleLike,
+  toggleLikes,
   handleAddCart,
   categoryfilter,
   sorting
@@ -52,7 +52,7 @@ const ItemList = ({
               isLiked={item.isLiked}
               category={categories.find(a => a._id === item.categoryId).name}
               color={categories.find(a => a._id === item.categoryId).color}
-              toggleLike={() => toggleLike(item._id)}
+              toggleLikes={() => toggleLikes(item._id)}
               handleAddCart={() => handleAddCart(item._id)}
             />
           ))}

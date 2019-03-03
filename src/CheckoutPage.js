@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cardInfo from "./static/creditCardInfo";
+import { getCardInfo } from "./static/creditCardInfo";
 
 const CheckoutPage = props => {
   const { cartItems } = props.location.state;
@@ -89,7 +89,7 @@ const CheckoutPage = props => {
       <div className="f3 mv4 bg-silver w-60 center pv3 br4 shadow-5 white">
         Click to Make Payment:
         <div className=" f1 w-50 mt2 center flex justify-around">
-          {cardInfo.map(a => (
+          {getCardInfo().map(a => (
             <Link to="/exit" key={a._id}>
               <i
                 onClick={makePayment}

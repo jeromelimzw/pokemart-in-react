@@ -1,7 +1,3 @@
-const RandGen = () => {
-  return Math.round(Math.random() * 20 + 1);
-};
-
 const items = [
   {
     _id: "f841552e-45f0-4608-8cdf-0d2bedfc7ee2",
@@ -10,9 +6,9 @@ const items = [
       "A device for capturing wild Pokémon. It's thrown like a ball at a Pokémon, comfortably encapsulating its target.",
     price: 5,
     categoryId: "0001",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Balls/Poke_Ball.png"
   },
@@ -23,9 +19,9 @@ const items = [
       "A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.",
     price: 10,
     categoryId: "0001",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Balls/Great_Ball.png"
   },
@@ -36,9 +32,9 @@ const items = [
       "An ultra-high performance Poké Ball that provides a higher Pokémon catch rate than a Great Ball.",
     price: 15,
     categoryId: "0001",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Balls/Ultra_Ball.png"
   },
@@ -49,9 +45,9 @@ const items = [
       "A special type of Poké Ball for capturing a Raid Boss in Bonus Challenge after defeating it in Raid Battle.",
     price: 20,
     categoryId: "0001",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Balls/Premier_Ball.png"
   },
@@ -62,9 +58,9 @@ const items = [
       "The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail.",
     price: 25,
     categoryId: "0001",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Balls/Master_Ball.png"
   },
@@ -75,9 +71,9 @@ const items = [
       "A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!",
     price: 500,
     categoryId: "0005",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Incubators/Egg_Incubator_Infinite.png"
   },
@@ -88,9 +84,9 @@ const items = [
       "A more powerful Egg Incubator helps Eggs hatch quickly. Breaks after 3 uses.",
     price: 200,
     categoryId: "0005",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Incubators/Super_Incubator.png"
   },
@@ -101,9 +97,9 @@ const items = [
       "A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.",
     price: 150,
     categoryId: "0005",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Incubators/Incubator_Limited.png"
   },
@@ -114,9 +110,9 @@ const items = [
       "A box that you can send to a friend. Contains a variety of useful items.",
     price: 30,
     categoryId: "0008",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Misc/Gift.png"
   },
@@ -127,9 +123,9 @@ const items = [
       "Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes.",
     price: 80,
     categoryId: "0008",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Misc/Incense.png"
   },
@@ -140,9 +136,9 @@ const items = [
       "A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.",
     price: 80,
     categoryId: "0008",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Misc/Lucky_Egg.png"
   },
@@ -153,9 +149,9 @@ const items = [
       "A module that attracts Pokémon to a PokéStop for 30 min. The effect benefits other people nearby.",
     price: 100,
     categoryId: "0008",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Misc/Lure_Module.png"
   },
@@ -165,9 +161,9 @@ const items = [
     description: "The Rare Candy can transform into Candy for any Pokémon.",
     price: 30,
     categoryId: "0008",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Misc/Rare_Candy.png"
   },
@@ -178,9 +174,9 @@ const items = [
       "A small shard of a beautiful gem. Earns 50% more Stardust for 30 minutes.",
     price: 50,
     categoryId: "0008",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Misc/Star_Piece.png"
   },
@@ -191,9 +187,9 @@ const items = [
       "EX Raid Pass to join a field test for a special Raid Battle. You can use this pass only at the specified limited-time event.",
     price: 50,
     categoryId: "0006",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Passes/EX_Raid_Pass.png"
   },
@@ -203,9 +199,9 @@ const items = [
     description: "A Raid Pass can be used to join a Raid Battle.",
     price: 100,
     categoryId: "0006",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Passes/Premium_Raid_Pass.png"
   },
@@ -216,9 +212,9 @@ const items = [
       "A ticket that allows you to participate in Raid Boss Battles.",
     price: 50,
     categoryId: "0006",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Passes/Raid_Pass.png"
   },
@@ -229,9 +225,9 @@ const items = [
       "A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.",
     price: 5,
     categoryId: "0004",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Potions/Potion.png"
   },
@@ -242,9 +238,9 @@ const items = [
       "A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.",
     price: 10,
     categoryId: "0004",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Potions/Super_Potion.png"
   },
@@ -255,9 +251,9 @@ const items = [
       "A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.",
     price: 15,
     categoryId: "0004",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Potions/Hyper_Potion.png"
   },
@@ -268,9 +264,9 @@ const items = [
       "A spray-type medicine for treating wounds. It will completely restore the max HP of a single Pokémon.",
     price: 20,
     categoryId: "0004",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Potions/Max_Potion.png"
   },
@@ -281,9 +277,9 @@ const items = [
       "A medicine that can revive fainted Pokémon. It also fully restores half of a fainted Pokémon's maximum HP.",
     price: 20,
     categoryId: "0003",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Revives/Revive.png"
   },
@@ -294,9 +290,9 @@ const items = [
       "A medicine that can revive fainted Pokémon. It also fully restores a fainted Pokémon's maximum HP.",
     price: 30,
     categoryId: "0003",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Revives/Max_Revive.png"
   },
@@ -307,9 +303,9 @@ const items = [
       "This item works like the Fast TM but it teaches the Charged Attack instead of a Fast Attack. ",
     price: 50,
     categoryId: "0007",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/TMs/Fast_TM.png"
   },
@@ -320,9 +316,9 @@ const items = [
       "This Technical Machine item is used to teach your Pokémon a new Fast Attack. ",
     price: 50,
     categoryId: "0007",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/TMs/Charged_TM.png"
   },
@@ -333,9 +329,9 @@ const items = [
       "Feed this to a Pokémon, and it will be easier to catch on your next throw.",
     price: 5,
     categoryId: "0002",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Berries/Razz_Berry.png"
   },
@@ -345,9 +341,9 @@ const items = [
     description: "Feed this to a Pokémon to make it drop more candy.",
     price: 5,
     categoryId: "0002",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Berries/Pinap_Berry.png"
   },
@@ -358,9 +354,9 @@ const items = [
       "Feed this to a Pokémon to receive more Candy when you catch it and make it easier to catch.",
     price: 5,
     categoryId: "0002",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Berries/Silver_Pinap_Berry.png"
   },
@@ -371,9 +367,9 @@ const items = [
       "Feed this to a Pokémon to calm it down, making it less erratic.",
     price: 5,
     categoryId: "0002",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Berries/Nanab_Berry.png"
   },
@@ -384,12 +380,26 @@ const items = [
       "Feed this to a wild Pokémon to make it much easier to catch. Feed this to a Pokémon on a Gym to fully restore its motivation.",
     price: 5,
     categoryId: "0002",
-    qtyStock: RandGen(),
+    qtyStock: 15,
     qtyCart: 0,
-    likes: RandGen(),
+    likes: 15,
     isLiked: false,
     imgUrl: "img/Berries/Golden_Razz_Berry.png"
   }
 ];
 
-export default items;
+export function getItems() {
+  return items;
+}
+
+export function toggleLikes(tarId) {
+  const target = items.find(a => a._id === tarId);
+  if (target.isLiked) {
+    target.isLiked = false;
+    target.likes--;
+  } else {
+    target.isLiked = true;
+    target.likes++;
+  }
+  console.log(target.name, target.likes, target.isLiked);
+}

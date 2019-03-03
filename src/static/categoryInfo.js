@@ -49,4 +49,6 @@ const categories = [
   }
 ];
 
-export default categories;
+export function getCategories() {
+  return categories;
+}
