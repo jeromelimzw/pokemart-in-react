@@ -9,6 +9,9 @@ const CheckoutPage = props => {
       "Your payment has been received. \nYour items will be delivered in 3-4 days."
     );
   };
+
+  const totalCost = cartItems.reduce((a, b) => a + b.qtyCart * b.price, 0);
+
   return (
     <div className="tc animated fadeIn">
       <h1 className="tracked-mega underline dark-blue">Shopping List</h1>
@@ -57,11 +60,22 @@ const CheckoutPage = props => {
             <td />
             <td />
             <td />
+            <td>SubTotal:</td>
+            <td>{`\u20bd ${totalCost}`}</td>
+          </tr>
+          <tr className="f3 fw7">
+            <td />
+            <td />
+            <td />
+            <td>5% Tax:</td>
+            <td>{`\u20bd ${totalCost * 0.05}`}</td>
+          </tr>
+          <tr className="f3 fw7">
+            <td />
+            <td />
+            <td />
             <td>Total:</td>
-            <td>{`\u20bd ${cartItems.reduce(
-              (a, b) => a + b.qtyCart * b.price,
-              0
-            )}`}</td>
+            <td>{`\u20bd ${totalCost * 1.05}`}</td>
           </tr>
         </tbody>
       </table>
