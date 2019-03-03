@@ -18,10 +18,19 @@ class NavBar extends Component {
             <br />
             MART
           </Link>
+          <div>
+            <Link
+              to="/checkout"
+              className="f1 grow self-center mr4 pointer green no-underline"
+            >
+              <i className="fas  fa-shopping-cart " />
+              Cart
+            </Link>
 
-          <Link to="/exit" className=" self-center">
-            <i className="fas fa-sign-out-alt f1 light-red ba br3 bg-gray pa3 pointer dim mh3 b--navy bw3" />
-          </Link>
+            <Link to="/exit" className=" self-center">
+              <i className="fas fa-sign-out-alt f1 light-red ba br3 bg-gray pa3 pointer dim mh3 b--navy bw3" />
+            </Link>
+          </div>
         </nav>
         <Switch>
           <Route path="/home" component={HomePage} />} />

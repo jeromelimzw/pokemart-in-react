@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import ItemList from "./ItemList";
 import FilterAndSort from "./FilterAndSort";
 import CartPanel from "./CartPanel";
-import { getItems, toggleLikes } from "./static/itemInfo";
+import {
+  getItems,
+  toggleLikes,
+  handleAddCart,
+  handleRemoveFromCart
+} from "./static/itemInfo";
 import { getCategories } from "./static/categoryInfo";
-import _ from "lodash";
 
 class HomePage extends Component {
   constructor(props) {
@@ -26,6 +30,16 @@ class HomePage extends Component {
     this.setState({ items: nextState });
   };
 
+  handleAddCart = tarId => {
+    const nextState = handleAddCart(tarId);
+    this.setState({ items: nextState });
+  };
+
+  handleRemoveFromCart = tarId => {
+    const nextState = handleRemoveFromCart(tarId);
+    this.setState({ items: nextState });
+  };
+
   handleSortBy = event => {
     this.setState({ sorting: event.target.value });
   };
@@ -40,31 +54,6 @@ class HomePage extends Component {
       : this.setState({ categoryfilter: event.target.id });
   };
 
-  handleAddCart = tarId => {
-    let nextState = _.cloneDeep(this.state.items);
-    nextState = nextState.map(item => {
-      return item._id === tarId
-        ? Object.assign({}, item, {
-            qtyStock: item.qtyStock - 1,
-            qtyCart: item.qtyCart + 1
-          })
-        : item;
-    });
-    this.setState({ items: nextState });
-  };
-
-  handleRemoveFromCart = tarId => {
-    let nextState = _.cloneDeep(this.state.items);
-    nextState = nextState.map(item => {
-      return item._id === tarId
-        ? Object.assign({}, item, {
-            qtyStock: item.qtyStock + item.qtyCart,
-            qtyCart: 0
-          })
-        : item;
-    });
-    this.setState({ items: nextState });
-  };
   render() {
     const {
       categories,

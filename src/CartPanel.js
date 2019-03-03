@@ -19,7 +19,7 @@ const CartPanel = ({ items, handleRemove }) => {
             handleRemove={handleRemove}
           />
           <Link
-            to={{ pathname: "/checkout", state: { cartItems } }}
+            to="/checkout"
             className="f5 shadow-5 dim tc grow self-center pointer ph4 pv1 white br3 bg-green no-underline"
           >
             PROCEED TO CART

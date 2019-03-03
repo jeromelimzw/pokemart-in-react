@@ -392,14 +392,31 @@ export function getItems() {
   return items;
 }
 
+export function getCartItems() {
+  return items.filter(a => a.qtyCart !== 0);
+}
+
 export function toggleLikes(tarId) {
   const target = items.find(a => a._id === tarId);
-  if (target.isLiked) {
-    target.isLiked = false;
-    target.likes--;
-  } else {
-    target.isLiked = true;
-    target.likes++;
-  }
+  target.likes++;
+  return items;
+}
+
+export function handleAddCart(tarId) {
+  const target = items.find(a => a._id === tarId);
+  target.qtyStock--;
+  target.qtyCart++;
+  return items;
+}
+
+export function handleRemoveFromCart(tarId) {
+  const target = items.find(a => a._id === tarId);
+  target.qtyStock += target.qtyCart;
+  target.qtyCart = 0;
+  return items;
+}
+
+export function handlePayment() {
+  items.forEach(a => (a.qtyCart = 0));
   return items;
 }
