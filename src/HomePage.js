@@ -6,7 +6,8 @@ import {
   getItems,
   toggleLikes,
   handleAddCart,
-  handleRemoveFromCart
+  handleRemoveFromCart,
+  toggleDescription
 } from "./static/itemInfo";
 import { getCategories } from "./static/categoryInfo";
 
@@ -24,6 +25,12 @@ class HomePage extends Component {
   componentDidMount() {
     this.setState({ items: getItems(), categories: getCategories() });
   }
+
+  toggleDescription = tarId => {
+    const nextState = toggleDescription(tarId);
+    this.setState({ items: nextState });
+    console.log(this.state.items[0].toggleDescription);
+  };
 
   toggleLikes = tarId => {
     const nextState = toggleLikes(tarId);
@@ -67,7 +74,8 @@ class HomePage extends Component {
       handleAddCart,
       handleCategory,
       handleRemoveFromCart,
-      handleSortBy
+      handleSortBy,
+      toggleDescription
     } = this;
     return (
       <div className="flex w-90 center justify-between animated fadeIn">
@@ -85,6 +93,7 @@ class HomePage extends Component {
           handleAddCart={handleAddCart}
           categoryfilter={categoryfilter}
           sorting={sorting}
+          toggleDescription={toggleDescription}
         />
         <CartPanel items={items} handleRemove={handleRemoveFromCart} />
       </div>

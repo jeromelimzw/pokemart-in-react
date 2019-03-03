@@ -8,7 +8,8 @@ const ItemList = ({
   toggleLikes,
   handleAddCart,
   categoryfilter,
-  sorting
+  sorting,
+  toggleDescription
 }) => {
   const filteredItems = items
     .filter(a => a.qtyStock !== 0)
@@ -55,6 +56,7 @@ const ItemList = ({
               toggleLikes={() => toggleLikes(item._id)}
               handleAddCart={() => handleAddCart(item._id)}
               descriptionToggle={item.descriptionToggle}
+              toggleDescription={() => toggleDescription(item._id)}
             />
           ))}
       </div>

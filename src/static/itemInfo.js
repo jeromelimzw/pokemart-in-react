@@ -433,6 +433,12 @@ export function toggleLikes(tarId) {
   return items;
 }
 
+export function toggleDescription(tarId) {
+  const target = items.find(a => a._id === tarId);
+  target.toggleDescription = !toggleDescription;
+  return items;
+}
+
 export function handleAddCart(tarId) {
   const target = items.find(a => a._id === tarId);
   target.qtyStock--;
