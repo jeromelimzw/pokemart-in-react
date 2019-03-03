@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const CheckoutPage = props => {
   const { cartItems } = props.location.state;
   const makePayment = () => {
+    prompt("Please enter your card number.", "***-***-***-**");
     alert(
       "Your payment has been received. \nYour items will be delivered in 3-4 days."
     );
