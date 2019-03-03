@@ -13,12 +13,18 @@ class HomePage extends Component {
       items: [],
       categories: [],
       searchfield: "",
-      categoryfilter: ""
+      categoryfilter: "",
+      sorting: ""
     };
   }
   componentDidMount() {
     this.setState({ items, categories });
   }
+
+  handleSortBy = event => {
+    this.setState({ sorting: event.target.value });
+    console.log(this.state.sorting);
+  };
 
   handleSearch = event => {
     this.setState({ searchfield: event.target.value });
@@ -45,9 +51,9 @@ class HomePage extends Component {
     nextState = nextState.map(item => {
       return item._id === tarId
         ? Object.assign({}, item, {
-            qtyStock: item.qtyStock - 1,
-            qtyCart: item.qtyCart + 1
-          })
+          qtyStock: item.qtyStock - 1,
+          qtyCart: item.qtyCart + 1
+        })
         : item;
     });
     this.setState({ items: nextState });
@@ -58,21 +64,28 @@ class HomePage extends Component {
     nextState = nextState.map(item => {
       return item._id === tarId
         ? Object.assign({}, item, {
-            qtyStock: item.qtyStock + item.qtyCart,
-            qtyCart: 0
-          })
+          qtyStock: item.qtyStock + item.qtyCart,
+          qtyCart: 0
+        })
         : item;
     });
     this.setState({ items: nextState });
   };
   render() {
-    const { categories, items, searchfield, categoryfilter } = this.state;
+    const {
+      categories,
+      items,
+      searchfield,
+      categoryfilter,
+      sorting
+    } = this.state;
     const {
       handleSearch,
       toggleLike,
       handleAddCart,
       handleCategory,
-      handleRemoveFromCart
+      handleRemoveFromCart,
+      handleSortBy
     } = this;
     return (
       <div className="flex w-90 center justify-between animated fadeIn">
@@ -80,6 +93,7 @@ class HomePage extends Component {
           categories={categories}
           handleSearch={handleSearch}
           handleCategory={handleCategory}
+          handleSortBy={handleSortBy}
         />
         <ItemList
           items={items}
@@ -88,6 +102,7 @@ class HomePage extends Component {
           toggleLike={toggleLike}
           handleAddCart={handleAddCart}
           categoryfilter={categoryfilter}
+          sorting={sorting}
         />
         <CartPanel items={items} handleRemove={handleRemoveFromCart} />
       </div>

@@ -63,7 +63,7 @@ const items = [
     price: 25,
     categoryId: "0001",
     qtyStock: RandGen(),
-    qtyCart: 1,
+    qtyCart: 0,
     likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Balls/Master_Ball.png"
