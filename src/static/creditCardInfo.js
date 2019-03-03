@@ -23,6 +23,21 @@ const cardInfo = [
     name: "apple",
     style: "fab fa-cc-apple-pay dark-red",
     _id: "0005"
+  },
+  {
+    name: "amazon-pay",
+    style: "fab fa-cc-amazon-pay orange",
+    _id: "0006"
+  },
+  {
+    name: "PayPal",
+    style: "fab fa-cc-paypal dark-purple",
+    _id: "0007"
+  },
+  {
+    name: "diners",
+    style: "fab fa-cc-diners-club dark-green",
+    _id: "0008"
   }
 ];
 

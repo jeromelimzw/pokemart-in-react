@@ -5,7 +5,7 @@ import cardInfo from "./static/creditCardInfo";
 const CheckoutPage = props => {
   const { cartItems } = props.location.state;
   const makePayment = () => {
-    var ccNumber = prompt("Please enter your card number.");
+    var ccNumber = prompt(`Please enter your card number.`);
     ccNumber === "your card number"
       ? alert(
           "Your payment has been received. \nYour items will be delivered in 3-4 days."
@@ -15,7 +15,9 @@ const CheckoutPage = props => {
         );
   };
 
-  const totalCost = cartItems.reduce((a, b) => a + b.qtyCart * b.price, 0);
+  const totalCost = cartItems
+    .reduce((a, b) => a + b.qtyCart * b.price, 0)
+    .toFixed(2);
 
   return (
     <div className="tc animated fadeIn">
@@ -61,21 +63,21 @@ const CheckoutPage = props => {
             );
           })}
 
-          <tr className="f3 fw7">
+          <tr className="f3 fw7 tl">
             <td />
             <td />
             <td />
             <td>SubTotal:</td>
             <td>{`\u20bd ${totalCost}`}</td>
           </tr>
-          <tr className="f3 fw7">
+          <tr className="f3 fw7 tl">
             <td />
             <td />
             <td />
             <td>5% Tax:</td>
             <td>{`\u20bd ${totalCost * 0.05}`}</td>
           </tr>
-          <tr className="f3 fw7">
+          <tr className="f3 fw7 tl">
             <td />
             <td />
             <td />
@@ -86,12 +88,12 @@ const CheckoutPage = props => {
       </table>
       <div className="f3 mv4 bg-silver w-60 center pv3 br4 shadow-5 white">
         Click to Make Payment:
-        <div className=" f1 w-40 mt2 center flex justify-around">
+        <div className=" f1 w-50 mt2 center flex justify-around">
           {cardInfo.map(a => (
             <Link to="/exit" key={a._id}>
               <i
                 onClick={makePayment}
-                className={`${a.style} grow-large pointer`}
+                className={`${a.style} grow-large pointer shadow-5`}
               />
             </Link>
           ))}

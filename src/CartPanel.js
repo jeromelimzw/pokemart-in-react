@@ -7,14 +7,10 @@ const CartPanel = ({ items, handleRemove }) => {
   const cartItems = items.filter(a => a.qtyCart !== 0);
 
   return (
-    <div className="w-25 h-50 bg-white pv3 tc br3 shadow-5">
+    <div className="w-25 h-50 bg-white pv3 tc br3 shadow-5 animated fadeIn">
       <span className="ma0 f3">CART</span> <hr className="w-30 ma1 center" />
       {totalInCart === 0 ? (
-        <img
-          src="img/empty-cart-png.png"
-          className="mv6 animated fadeIn"
-          alt="empty-cart"
-        />
+        <img src="img/empty-cart-png.png" className="mv6 " alt="empty-cart" />
       ) : (
         <React.Fragment>
           <CartCalc
