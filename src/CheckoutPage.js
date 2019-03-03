@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import cardInfo from "./static/creditCardInfo";
 
 const CheckoutPage = props => {
   const { cartItems } = props.location.state;
   const makePayment = () => {
-    prompt("Please enter your card number.", "***-***-***-**");
-    alert(
-      "Your payment has been received. \nYour items will be delivered in 3-4 days."
-    );
+    var ccNumber = prompt("Please enter your card number.");
+    ccNumber === "your card number"
+      ? alert(
+          "Your payment has been received. \nYour items will be delivered in 3-4 days."
+        )
+      : alert(
+          "Your payment has been rejected. \nPlease try entering it again."
+        );
   };
 
   const totalCost = cartItems.reduce((a, b) => a + b.qtyCart * b.price, 0);
@@ -16,20 +21,20 @@ const CheckoutPage = props => {
     <div className="tc animated fadeIn">
       <h1 className="tracked-mega underline dark-blue">Shopping List</h1>
       <table className="center w-60 h-25 f3 bg-silver white br4 pv3 shadow-5 mb3">
-        <thead className="underline">
-          <th>Item</th>
-          <th>Item Name</th>
-          <th>Unit Price</th>
-          <th>Quantity Purchased</th>
-          <th>SubTotal</th>
-        </thead>
-        <tr>
-          <td colSpan="5">
-            <hr />
-          </td>
-        </tr>
-
         <tbody>
+          <tr className="underline">
+            <td>Item</td>
+            <td>Item Name</td>
+            <td>Unit Price</td>
+            <td>Quantity Purchased</td>
+            <td>SubTotal</td>
+          </tr>
+          <tr>
+            <td colSpan="5">
+              <hr />
+            </td>
+          </tr>
+
           {cartItems.map(a => {
             return (
               <React.Fragment key={a._id}>
@@ -82,36 +87,14 @@ const CheckoutPage = props => {
       <div className="f3 mv4 bg-silver w-60 center pv3 br4 shadow-5 white">
         Click to Make Payment:
         <div className=" f1 w-40 mt2 center flex justify-around">
-          <Link to="/exit">
-            <i
-              onClick={makePayment}
-              className="far fa-credit-card grow-large pointer dark-pink"
-            />
-          </Link>
-          <Link to="/exit">
-            <i
-              onClick={makePayment}
-              className="fab fa-cc-visa grow-large pointer blue"
-            />
-          </Link>
-          <Link to="/exit">
-            <i
-              onClick={makePayment}
-              className="fab fa-cc-stripe grow-large pointer dark-gray"
-            />
-          </Link>
-          <Link to="/exit">
-            <i
-              onClick={makePayment}
-              className="fab fa-cc-jcb grow-large pointer green"
-            />
-          </Link>
-          <Link to="/exit">
-            <i
-              onClick={makePayment}
-              className="fab fa-cc-apple-pay grow-large pointer dark-red"
-            />
-          </Link>
+          {cardInfo.map(a => (
+            <Link to="/exit" key={a._id}>
+              <i
+                onClick={makePayment}
+                className={`${a.style} grow-large pointer`}
+              />
+            </Link>
+          ))}
         </div>
       </div>
     </div>
