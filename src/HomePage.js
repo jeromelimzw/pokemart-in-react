@@ -22,13 +22,12 @@ class HomePage extends Component {
   }
 
   toggleLikes = tarId => {
-    toggleLikes(tarId);
-    this.setState({ items: getItems() });
+    const nextState = toggleLikes(tarId);
+    this.setState({ items: nextState });
   };
 
   handleSortBy = event => {
     this.setState({ sorting: event.target.value });
-    console.log(this.state.sorting);
   };
 
   handleSearch = event => {

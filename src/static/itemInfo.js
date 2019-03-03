@@ -401,5 +401,5 @@ export function toggleLikes(tarId) {
     target.isLiked = true;
     target.likes++;
   }
-  console.log(target.name, target.likes, target.isLiked);
+  return items;
 }
