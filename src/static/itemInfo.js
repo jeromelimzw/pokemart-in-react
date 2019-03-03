@@ -435,7 +435,7 @@ export function toggleLikes(tarId) {
 
 export function toggleDescription(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.toggleDescription = !toggleDescription;
+  target.descriptionToggle = !target.descriptionToggle;
   return items;
 }
 
