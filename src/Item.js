@@ -11,7 +11,8 @@ const Item = ({
   category,
   color,
   toggleLikes,
-  handleAddCart
+  handleAddCart,
+  descriptionToggle
 }) => {
   return (
     <div
@@ -28,9 +29,21 @@ const Item = ({
 
       <div className="flex flex-column justify-around mt2">
         <div>
-          <div className="f4 fw7">{name}</div>
-          <p className="f5 dark-gray">{description}</p>
-          <hr className="mt0 w-80 center" />
+          {descriptionToggle ? (
+            <React.Fragment>
+              <div className="flex justify-between">
+                <span className="f4 fw7">{name}</span>
+                <i class="fas fa-minus-square f4" />
+              </div>
+              <span className="f5 dark-gray">{description}</span>
+              <hr className="mt2 w-80 center" />
+            </React.Fragment>
+          ) : (
+            <div classNmae="flex justify-between">
+              <span className="f4 fw7">{name}</span>
+              <i className="fas fa-plus-square f4" />
+            </div>
+          )}
         </div>
         <div className="flex justify-between fw6 mb2">
           {qty !== 0 && (
@@ -48,7 +61,7 @@ const Item = ({
           )}
           <span className="f5 gray self-center">{`${qty} left`}</span>
           <span className="f4 self-center">
-            {likes}
+            <span>{likes}</span>
             <i
               className={`${
                 isLiked ? "fas" : "far"
