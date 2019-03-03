@@ -1,5 +1,5 @@
 const RandGen = () => {
-  return Math.round(Math.random() * 20);
+  return Math.round(Math.random() * 20 + 1);
 };
 
 const items = [
@@ -12,7 +12,7 @@ const items = [
     categoryId: "0001",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 9,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Balls/Poke_Ball.png"
   },
@@ -25,7 +25,7 @@ const items = [
     categoryId: "0001",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 25,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Balls/Great_Ball.png"
   },
@@ -38,7 +38,7 @@ const items = [
     categoryId: "0001",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 18,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Balls/Ultra_Ball.png"
   },
@@ -51,7 +51,7 @@ const items = [
     categoryId: "0001",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 13,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Balls/Premier_Ball.png"
   },
@@ -63,8 +63,8 @@ const items = [
     price: 25,
     categoryId: "0001",
     qtyStock: RandGen(),
-    qtyCart: 0,
-    likes: 5,
+    qtyCart: 1,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Balls/Master_Ball.png"
   },
@@ -77,7 +77,7 @@ const items = [
     categoryId: "0005",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 24,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Incubators/Egg_Incubator_Infinite.png"
   },
@@ -90,7 +90,7 @@ const items = [
     categoryId: "0005",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 21,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Incubators/Super_Incubator.png"
   },
@@ -103,7 +103,7 @@ const items = [
     categoryId: "0005",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 34,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Incubators/Incubator_Limited.png"
   },
@@ -116,7 +116,7 @@ const items = [
     categoryId: "0008",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 6,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Misc/Gift.png"
   },
@@ -129,7 +129,7 @@ const items = [
     categoryId: "0008",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 6,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Misc/Incense.png"
   },
@@ -142,7 +142,7 @@ const items = [
     categoryId: "0008",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 33,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Misc/Lucky_Egg.png"
   },
@@ -155,7 +155,7 @@ const items = [
     categoryId: "0008",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 9,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Misc/Lure_Module.png"
   },
@@ -167,7 +167,7 @@ const items = [
     categoryId: "0008",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 21,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Misc/Rare_Candy.png"
   },
@@ -180,7 +180,7 @@ const items = [
     categoryId: "0008",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 13,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Misc/Star_Piece.png"
   },
@@ -193,7 +193,7 @@ const items = [
     categoryId: "0006",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 7,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Passes/EX_Raid_Pass.png"
   },
@@ -205,7 +205,7 @@ const items = [
     categoryId: "0006",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 36,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Passes/Premium_Raid_Pass.png"
   },
@@ -218,7 +218,7 @@ const items = [
     categoryId: "0006",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 6,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Passes/Raid_Pass.png"
   },
@@ -231,7 +231,7 @@ const items = [
     categoryId: "0004",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 25,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Potions/Potion.png"
   },
@@ -244,7 +244,7 @@ const items = [
     categoryId: "0004",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 39,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Potions/Super_Potion.png"
   },
@@ -257,7 +257,7 @@ const items = [
     categoryId: "0004",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 26,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Potions/Hyper_Potion.png"
   },
@@ -270,7 +270,7 @@ const items = [
     categoryId: "0004",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 16,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Potions/Max_Potion.png"
   },
@@ -283,7 +283,7 @@ const items = [
     categoryId: "0003",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 31,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Revives/Revive.png"
   },
@@ -296,7 +296,7 @@ const items = [
     categoryId: "0003",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 31,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Revives/Max_Revive.png"
   },
@@ -309,7 +309,7 @@ const items = [
     categoryId: "0007",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 18,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/TMs/Fast_TM.png"
   },
@@ -322,7 +322,7 @@ const items = [
     categoryId: "0007",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 28,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/TMs/Charged_TM.png"
   },
@@ -335,7 +335,7 @@ const items = [
     categoryId: "0002",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 28,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Berries/Razz_Berry.png"
   },
@@ -347,7 +347,7 @@ const items = [
     categoryId: "0002",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 16,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Berries/Pinap_Berry.png"
   },
@@ -360,7 +360,7 @@ const items = [
     categoryId: "0002",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 6,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Berries/Silver_Pinap_Berry.png"
   },
@@ -373,7 +373,7 @@ const items = [
     categoryId: "0002",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 18,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Berries/Nanab_Berry.png"
   },
@@ -386,7 +386,7 @@ const items = [
     categoryId: "0002",
     qtyStock: RandGen(),
     qtyCart: 0,
-    likes: 9,
+    likes: RandGen(),
     isLiked: false,
     imgUrl: "img/Berries/Golden_Razz_Berry.png"
   }

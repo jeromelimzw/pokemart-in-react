@@ -46,9 +46,7 @@ const Item = ({
               />
             </button>
           )}
-          <span className="f5 gray self-center">
-            {qty === 0 ? "-OUT OF STOCK-" : `${qty} left`}
-          </span>
+          <span className="f5 gray self-center">{`${qty} left`}</span>
           <span className="f4 self-center">
             {isLiked ? likes + 1 : likes}
             <i

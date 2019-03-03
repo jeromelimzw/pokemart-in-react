@@ -10,13 +10,14 @@ const ItemList = ({
   categoryfilter
 }) => {
   const filteredItems = items
+    .filter(a => a.qtyStock !== 0)
     .filter(a => a.name.toLowerCase().includes(searchfield.toLowerCase()))
     .filter(a => a.categoryId.includes(categoryfilter));
 
   const length = filteredItems.length;
 
   return (
-    <div className="w-70 ml5 animated fadeIn">
+    <div className="w-70 ml5">
       <span className=" f4">
         {length === 0
           ? `No results found for ${searchfield} ...`

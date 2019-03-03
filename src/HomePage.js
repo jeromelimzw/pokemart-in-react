@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import ItemList from "./ItemList";
 import FilterAndSort from "./FilterAndSort";
 import CartPanel from "./CartPanel";
-import items from "./itemInfo";
-import categories from "./categoryInfo";
+import items from "./static/itemInfo";
+import categories from "./static/categoryInfo";
 import _ from "lodash";
 
 class HomePage extends Component {
@@ -53,9 +53,27 @@ class HomePage extends Component {
     this.setState({ items: nextState });
   };
 
+  handleRemoveFromCart = tarId => {
+    let nextState = _.cloneDeep(this.state.items);
+    nextState = nextState.map(item => {
+      return item._id === tarId
+        ? Object.assign({}, item, {
+            qtyStock: item.qtyStock + item.qtyCart,
+            qtyCart: 0
+          })
+        : item;
+    });
+    this.setState({ items: nextState });
+  };
   render() {
     const { categories, items, searchfield, categoryfilter } = this.state;
-    const { handleSearch, toggleLike, handleAddCart, handleCategory } = this;
+    const {
+      handleSearch,
+      toggleLike,
+      handleAddCart,
+      handleCategory,
+      handleRemoveFromCart
+    } = this;
     return (
       <div className="flex w-90 center justify-between animated fadeIn">
         <FilterAndSort
@@ -71,7 +89,7 @@ class HomePage extends Component {
           handleAddCart={handleAddCart}
           categoryfilter={categoryfilter}
         />
-        <CartPanel items={items} />
+        <CartPanel items={items} handleRemove={handleRemoveFromCart} />
       </div>
     );
   }
