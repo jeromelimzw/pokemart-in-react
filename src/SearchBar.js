@@ -3,12 +3,11 @@ import React from "react";
 const SearchBar = ({ handleSearch }) => {
   return (
     <div className="mb4">
-      <span className="ma0 f3">SEARCH</span>
-      <hr className="w-40 ma1 mb3 center" />
+      <div className="pv1 bg-gray white f3 pl3 tl fw3 mb2">search</div>
       <input
         type="searchbar"
         placeholder="🔍 items here..."
-        className=" tc f3 bw1 bg-near-white w-90 shadow-5 pv2 dim "
+        className=" mt2 tc f4 bg-near-white w-90 shadow-5 dim "
         onChange={handleSearch}
       />
     </div>

@@ -8,27 +8,44 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className=" bg-near-white pv3 mb4 shadow-5 flex justify-around">
-          <Link
-            to="/home"
-            className="f1 fw7 purple pointer grow no-underline ttu tracked-tight"
-          >
-            P<img src="img/pokemart-logo.png" width="50" alt="o in Pokemart" />
-            Ké
-            <br />
-            MART
-          </Link>
-          <div>
+        <nav className=" bg-near-white bw1 flex justify-between shadow-5">
+          <div className="flex justify-between">
+            <Link
+              to="/home"
+              className="f2 fw7 bg-dark-red ph3 pv2 white no-underline tracked-tight"
+            >
+              p
+              <img src="img/pokemart-logo.png" width="30" alt="o in Pokemart" />
+              ké
+              <i class="fab fa-mendeley" />
+              art
+            </Link>
+            <Link
+              to="/home"
+              className="self-center f3 gray no-underline pa3 ph4"
+              activeClassName="bg-dark-gray white"
+            >
+              home
+              <i className="fas fa-home " />
+            </Link>
+          </div>
+          <div className="flex justify-between">
             <Link
               to="/checkout"
-              className="f1 grow self-center mr4 pointer green no-underline"
+              className="self-center f3 gray no-underline pa3 ph4"
+              activeClassName="bg-dark-gray white"
             >
-              <i className="fas  fa-shopping-cart " />
-              Cart
+              cart
+              <i className="fas fa-cart-plus " />
             </Link>
 
-            <Link to="/exit" className=" self-center">
-              <i className="fas fa-sign-out-alt f1 light-red ba br3 bg-gray pa3 pointer dim mh3 b--navy bw3" />
+            <Link
+              to="/exit"
+              className=" self-center f3 gray no-underline pa3 mr3"
+              activeClassName="bg-dark-gray white"
+            >
+              sign-out
+              <i className="fas fa-sign-out-alt mh2" />
             </Link>
           </div>
         </nav>

@@ -3,7 +3,7 @@ import React from "react";
 const CartCalc = ({ items, handleRemove }) => {
   const totalCost = items.reduce((a, b) => a + b.qtyCart * b.price, 0);
   return (
-    <div className="pv3 f5 ph1 animated fadeIn">
+    <div className="pv3 f5 ph1  animated fadeIn">
       <table className="tl w-100 h-25 fw6">
         <tbody>
           {items.map(a => {

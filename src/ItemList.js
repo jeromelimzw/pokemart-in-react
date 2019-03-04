@@ -23,7 +23,7 @@ const ItemList = ({
   const length = filteredItems.length;
 
   return (
-    <div className="w-70 ml5">
+    <div className="w-80 ml4">
       <span className=" f4">
         {length === 0
           ? `no items found ...  try expanding search criteria ...`

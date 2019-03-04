@@ -3,9 +3,7 @@ import CategoryButton from "./CategoryButton";
 
 const CategoryFilter = ({ categories, handleCategory }) => {
   return (
-    <div>
-      <span className="ma0 f3">CATEGORIES</span>
-      <hr className="w-40 ma1 mb3 center" />
+    <div className="flex center mb4">
       {categories.map(a => {
         return (
           <CategoryButton
@@ -14,9 +12,10 @@ const CategoryFilter = ({ categories, handleCategory }) => {
             imgUrl={a.imgUrl}
             color={a.color}
             handleCategory={handleCategory}
+            name={a.name}
           />
         );
-      })}{" "}
+      })}
     </div>
   );
 };

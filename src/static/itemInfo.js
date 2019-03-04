@@ -10,7 +10,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: true,
+    descriptionToggle: false,
     imgUrl: "img/Balls/Poke_Ball.png"
   },
   {
@@ -63,7 +63,7 @@ const items = [
     price: 25,
     categoryId: "0001",
     qtyStock: 15,
-    qtyCart: 0,
+    qtyCart: 1,
     likes: 15,
     isLiked: false,
     descriptionToggle: false,
@@ -71,13 +71,13 @@ const items = [
   },
   {
     _id: "c4dd9b35-0e76-4b00-9502-3fdb29b94e85",
-    name: "Infinite Incubator",
+    name: "∞ Incubator",
     description:
       "A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!",
     price: 500,
     categoryId: "0005",
     qtyStock: 15,
-    qtyCart: 0,
+    qtyCart: 1,
     likes: 15,
     isLiked: false,
     descriptionToggle: false,

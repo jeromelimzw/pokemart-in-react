@@ -17,7 +17,7 @@ const Item = ({
 }) => {
   return (
     <div
-      className={`br3 ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2 animated fadeIn`}
+      className={` ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2 animated fadeIn`}
     >
       <h3 className={`f6 mb0 mt2 tc ttu ${color}`}>{category}</h3>
       <hr className="mt1 w-30 center" />
@@ -39,7 +39,9 @@ const Item = ({
                   onClick={toggleDescription}
                 />
               </div>
-              <span className="f5 dark-gray">{description}</span>
+              <span className="f5 dark-gray animated fadeInDown">
+                {description}
+              </span>
               <hr className="mt2 w-80 center" />
             </React.Fragment>
           ) : (

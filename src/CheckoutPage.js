@@ -21,15 +21,15 @@ const CheckoutPage = props => {
         <img src="img/empty-cart-png.png" className="mv6 " alt="empty-cart" />
       ) : (
         <React.Fragment>
-          <h1 className="tracked-mega underline dark-blue">Shopping List</h1>
-          <table className="center w-60 h-25 f3 bg-silver white br4 pv3 shadow-5 mb3">
+          <h1 className="tracked-mega">shopping cart</h1>
+          <table className="center w-60 h-25 f3 bg-silver white pv3 shadow-5 mb3">
             <tbody>
-              <tr className="underline">
-                <td>Item</td>
-                <td>Item Name</td>
-                <td>Unit Price</td>
-                <td>Quantity Purchased</td>
-                <td>SubTotal</td>
+              <tr>
+                <td>item</td>
+                <td>name</td>
+                <td>unit price</td>
+                <td>quantity purchased</td>
+                <td>sub-total</td>
               </tr>
               <tr>
                 <td colSpan="5">
@@ -86,8 +86,8 @@ const CheckoutPage = props => {
               </tr>
             </tbody>
           </table>
-          <div className="f3 mv4 bg-silver w-60 center pv3 br4 shadow-5 white">
-            Click to Make Payment:
+          <div className="f3 mv4 bg-silver w-60 center pv3 shadow-5 white">
+            click to make payment:
             <div className=" f1 w-50 mt2 center flex justify-around">
               {getCardInfo().map(a => (
                 <Link to="/exit" key={a._id}>

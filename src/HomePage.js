@@ -10,6 +10,7 @@ import {
   toggleDescription
 } from "./static/itemInfo";
 import { getCategories } from "./static/categoryInfo";
+import CategoryFilter from "./CategoryFilter";
 
 class HomePage extends Component {
   constructor(props) {
@@ -78,24 +79,30 @@ class HomePage extends Component {
       toggleDescription
     } = this;
     return (
-      <div className="flex w-90 center justify-between animated fadeIn">
-        <FilterAndSort
+      <div>
+        <CategoryFilter
           categories={categories}
-          handleSearch={handleSearch}
           handleCategory={handleCategory}
-          handleSortBy={handleSortBy}
         />
-        <ItemList
-          items={items}
-          categories={categories}
-          searchfield={searchfield}
-          toggleLikes={toggleLikes}
-          handleAddCart={handleAddCart}
-          categoryfilter={categoryfilter}
-          sorting={sorting}
-          toggleDescription={toggleDescription}
-        />
-        <CartPanel items={items} handleRemove={handleRemoveFromCart} />
+        <div className="flex w-90 center justify-between animated fadeIn">
+          <FilterAndSort
+            categories={categories}
+            handleSearch={handleSearch}
+            handleCategory={handleCategory}
+            handleSortBy={handleSortBy}
+          />
+          <ItemList
+            items={items}
+            categories={categories}
+            searchfield={searchfield}
+            toggleLikes={toggleLikes}
+            handleAddCart={handleAddCart}
+            categoryfilter={categoryfilter}
+            sorting={sorting}
+            toggleDescription={toggleDescription}
+          />
+          <CartPanel items={items} handleRemove={handleRemoveFromCart} />
+        </div>
       </div>
     );
   }
