@@ -12,7 +12,7 @@ const Item = ({
   color,
   toggleLikes,
   handleAddCart,
-  descriptionToggle,
+  descriptionIsVisible,
   toggleDescription
 }) => {
   return (
@@ -30,7 +30,7 @@ const Item = ({
 
       <div className="flex flex-column justify-around mt2">
         <div>
-          {descriptionToggle ? (
+          {descriptionIsVisible ? (
             <React.Fragment>
               <div className="flex justify-between">
                 <span className="f4 fw7">{name}</span>
@@ -46,7 +46,7 @@ const Item = ({
             </React.Fragment>
           ) : (
             <div className="flex justify-between">
-              <span className="f4 fw7">{name}</span>
+              <span className="f4 fw7 mb2">{name}</span>
               <i
                 className="fas fa-plus-square f4 pointer"
                 onClick={toggleDescription}

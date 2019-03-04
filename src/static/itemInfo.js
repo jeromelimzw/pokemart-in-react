@@ -1,4 +1,4 @@
-const items = [
+let items = [
   {
     _id: "f841552e-45f0-4608-8cdf-0d2bedfc7ee2",
     name: "Poké Ball",
@@ -10,7 +10,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Balls/Poke_Ball.png"
   },
   {
@@ -24,7 +24,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Balls/Great_Ball.png"
   },
   {
@@ -38,7 +38,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Balls/Ultra_Ball.png"
   },
   {
@@ -52,7 +52,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Balls/Premier_Ball.png"
   },
   {
@@ -66,7 +66,7 @@ const items = [
     qtyCart: 1,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Balls/Master_Ball.png"
   },
   {
@@ -80,7 +80,7 @@ const items = [
     qtyCart: 1,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Incubators/Egg_Incubator_Infinite.png"
   },
   {
@@ -94,7 +94,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Incubators/Super_Incubator.png"
   },
   {
@@ -108,7 +108,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Incubators/Incubator_Limited.png"
   },
   {
@@ -122,7 +122,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Misc/Gift.png"
   },
   {
@@ -136,7 +136,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Misc/Incense.png"
   },
   {
@@ -150,7 +150,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Misc/Lucky_Egg.png"
   },
   {
@@ -164,7 +164,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Misc/Lure_Module.png"
   },
   {
@@ -177,7 +177,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Misc/Rare_Candy.png"
   },
   {
@@ -191,7 +191,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Misc/Star_Piece.png"
   },
   {
@@ -205,7 +205,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Passes/EX_Raid_Pass.png"
   },
   {
@@ -218,7 +218,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Passes/Premium_Raid_Pass.png"
   },
   {
@@ -232,7 +232,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Passes/Raid_Pass.png"
   },
   {
@@ -246,7 +246,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Potions/Potion.png"
   },
   {
@@ -260,7 +260,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Potions/Super_Potion.png"
   },
   {
@@ -274,7 +274,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Potions/Hyper_Potion.png"
   },
   {
@@ -288,7 +288,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Potions/Max_Potion.png"
   },
   {
@@ -302,7 +302,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Revives/Revive.png"
   },
   {
@@ -316,7 +316,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Revives/Max_Revive.png"
   },
   {
@@ -330,7 +330,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/TMs/Fast_TM.png"
   },
   {
@@ -344,7 +344,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/TMs/Charged_TM.png"
   },
   {
@@ -358,7 +358,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Berries/Razz_Berry.png"
   },
   {
@@ -371,7 +371,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Berries/Pinap_Berry.png"
   },
   {
@@ -385,7 +385,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Berries/Silver_Pinap_Berry.png"
   },
   {
@@ -399,7 +399,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Berries/Nanab_Berry.png"
   },
   {
@@ -413,7 +413,7 @@ const items = [
     qtyCart: 0,
     likes: 15,
     isLiked: false,
-    descriptionToggle: false,
+    descriptionIsVisible: false,
     imgUrl: "img/Berries/Golden_Razz_Berry.png"
   }
 ];
@@ -433,9 +433,13 @@ export function toggleLikes(tarId) {
   return items;
 }
 
-export function toggleDescription(tarId) {
-  const target = items.find(a => a._id === tarId);
-  target.descriptionToggle = !target.descriptionToggle;
+export function toggleDescription() {
+  let newItems = items.map(item => {
+    return Object.assign({}, item, {
+      descriptionIsVisible: !item.descriptionIsVisible
+    });
+  });
+  items = newItems;
   return items;
 }
 

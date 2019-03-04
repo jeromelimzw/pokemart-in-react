@@ -55,8 +55,8 @@ const ItemList = ({
               color={categories.find(a => a._id === item.categoryId).color}
               toggleLikes={() => toggleLikes(item._id)}
               handleAddCart={() => handleAddCart(item._id)}
-              descriptionToggle={item.descriptionToggle}
-              toggleDescription={() => toggleDescription(item._id)}
+              descriptionIsVisible={item.descriptionIsVisible}
+              toggleDescription={toggleDescription}
             />
           ))}
       </div>

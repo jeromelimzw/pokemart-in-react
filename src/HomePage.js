@@ -27,10 +27,9 @@ class HomePage extends Component {
     this.setState({ items: getItems(), categories: getCategories() });
   }
 
-  toggleDescription = tarId => {
-    const nextState = toggleDescription(tarId);
+  toggleDescription = () => {
+    const nextState = toggleDescription();
     this.setState({ items: nextState });
-    console.log(this.state.items[0].toggleDescription);
   };
 
   toggleLikes = tarId => {

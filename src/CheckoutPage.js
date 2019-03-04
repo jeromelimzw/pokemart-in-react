@@ -67,21 +67,21 @@ const CheckoutPage = props => {
                 <td />
                 <td />
                 <td />
-                <td>SubTotal:</td>
+                <td>sub-total:</td>
                 <td>{`\u20bd ${totalCost}`}</td>
               </tr>
               <tr className="f3 fw7 tl">
                 <td />
                 <td />
                 <td />
-                <td>5% Tax:</td>
+                <td>5% tax:</td>
                 <td>{`\u20bd ${totalCost * 0.05}`}</td>
               </tr>
               <tr className="f3 fw7 tl">
                 <td />
                 <td />
                 <td />
-                <td>Total:</td>
+                <td>total:</td>
                 <td>{`\u20bd ${totalCost * 1.05}`}</td>
               </tr>
             </tbody>

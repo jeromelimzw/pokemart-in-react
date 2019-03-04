@@ -17,7 +17,7 @@ class NavBar extends Component {
               p
               <img src="img/pokemart-logo.png" width="30" alt="o in Pokemart" />
               ké
-              <i class="fab fa-mendeley" />
+              <i className="fab fa-mendeley" />
               art
             </Link>
             <Link
@@ -55,6 +55,26 @@ class NavBar extends Component {
           <Route path="/checkout" component={CheckoutPage} />
           <Redirect from="/" to="/home" />
         </Switch>
+        <footer class="bg-dark-gray white-80 pv4 mt3">
+          <p class="f4">
+            <span class="dib ml4 mr4">made in react</span>
+            <a class="link white-80 hover-light-purple" href="/terms">
+              Terms
+            </a>{" "}
+            /
+            <a class="link white-80 hover-gold" href="/privacy">
+              {" "}
+              Privacy{" "}
+            </a>{" "}
+            /
+            <a
+              class="link white-80 hover-green"
+              href="https://github.com/jeromelimzw"
+            >
+              github
+            </a>
+          </p>
+        </footer>
       </div>
     );
   }
