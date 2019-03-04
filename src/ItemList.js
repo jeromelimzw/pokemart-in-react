@@ -23,13 +23,13 @@ const ItemList = ({
   const length = filteredItems.length;
 
   return (
-    <div className="w-80 ml4">
-      <span className=" f4">
+    <div className="w-70 center">
+      <span className=" f4 ml4">
         {length === 0
           ? `no items found ...  try expanding search criteria ...`
           : `displaying ${length} items ...`}
       </span>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mh2 pl4">
         {filteredItems
           .sort((a, b) => {
             return sorting === "popular"

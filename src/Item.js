@@ -17,7 +17,7 @@ const Item = ({
 }) => {
   return (
     <div
-      className={` ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2 animated fadeIn`}
+      className={` ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph3 animated fadeIn`}
     >
       <h3 className={`f6 mb0 mt2 tc ttu ${color}`}>{category}</h3>
       <hr className="mt1 w-30 center" />
@@ -28,7 +28,7 @@ const Item = ({
         alt={name}
       />
 
-      <div className="flex flex-column justify-around mt2">
+      <div className="flex flex-column justify-between mt2">
         <div>
           {descriptionIsVisible ? (
             <React.Fragment>
@@ -39,7 +39,7 @@ const Item = ({
                   onClick={toggleDescription}
                 />
               </div>
-              <span className="f5 dark-gray animated fadeInDown">
+              <span className="f5 dark-gray animated fadeInDown lh-title">
                 {description}
               </span>
               <hr className="mt2 w-80 center" />
@@ -54,10 +54,10 @@ const Item = ({
             </div>
           )}
         </div>
-        <div className="flex justify-between fw6 mb2">
+        <div className="flex  fw6 mb1 items-end">
           {qty !== 0 && (
             <button
-              className="w-40 f3 br2 bg-near-white pointer flex justify-around shadow-5 pv1"
+              className=" f4 br2 bg-near-white pointer flex justify-around shadow-5 pv1 ph2"
               onClick={handleAddCart}
             >
               <strong className="self-center">{price}</strong>
@@ -68,8 +68,8 @@ const Item = ({
               />
             </button>
           )}
-          <span className="f5 gray self-center">{`${qty} left`}</span>
-          <span className="f4 self-center">
+          <div className="f5 gray pl3 center">{`${qty} left`}</div>
+          <div className="f4 self-center">
             <span>{likes}</span>
             <i
               className={`${
@@ -77,7 +77,7 @@ const Item = ({
               } fa-heart hover-red red pointer grow-large`}
               onClick={toggleLikes}
             />
-          </span>
+          </div>
         </div>
       </div>
     </div>

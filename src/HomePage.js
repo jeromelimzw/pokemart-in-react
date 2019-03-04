@@ -23,6 +23,7 @@ class HomePage extends Component {
       sorting: ""
     };
   }
+
   componentDidMount() {
     this.setState({ items: getItems(), categories: getCategories() });
   }

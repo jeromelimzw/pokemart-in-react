@@ -19,7 +19,7 @@ const CartCalc = ({ items, handleRemove }) => {
                     />
                   </td>
                   <td>{a.name}</td>
-                  <td>Quantity:</td>
+                  <td>quantity:</td>
                   <td>{a.qtyCart}</td>
                   <td>
                     <i
@@ -34,8 +34,8 @@ const CartCalc = ({ items, handleRemove }) => {
                     {a.price}
                     <img src="img\PokéCoin.png" width="20" alt="" />
                   </td>
-                  <td>SubTotal:</td>
-                  <td>{`\u20bd ${a.price * a.qtyCart} `}</td>
+                  <td>sub-total:</td>
+                  <td colspan="2">{`\u20bd ${a.price * a.qtyCart} `}</td>
                 </tr>
                 <tr>
                   <td colSpan="5">
@@ -49,7 +49,7 @@ const CartCalc = ({ items, handleRemove }) => {
           <tr className="f3">
             <td />
             <td>Total:</td>
-            <td>{`\u20bd ${totalCost}`}</td>
+            <td colspan="2"> {`\u20bd ${totalCost}`}</td>
           </tr>
         </tbody>
       </table>
