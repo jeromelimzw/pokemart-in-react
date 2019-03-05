@@ -3,7 +3,7 @@ import sortOptions from "./static/sortingInfo";
 
 const SortByPanel = ({ handleSortBy }) => {
   return (
-    <div className="mt4">
+    <div className=" bg-white pb3 tc shadow-5">
       <div className="w-100 bg-gray white f3 pv1 pl3 tl fw3 mb3">sort</div>
       <div className=" tl f6 flex flex-column">
         {sortOptions.map(a => (

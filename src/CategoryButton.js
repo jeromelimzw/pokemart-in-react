@@ -4,9 +4,8 @@ const CategoryButton = ({ id, imgUrl, color, handleCategory, name }) => {
   return (
     <div
       onClick={handleCategory}
-      className={` w-20 bb bw2 bg-moon-gray b--${color} bw2 flex pointer  ${
-        name.length === 0 ? "pa0" : "ph2"
-      }`}
+      className={` w-20 bb bw2 bg-moon-gray dark-gray hover-bg-near-white b--${color} bw2 flex pointer ph2 shadow-5
+      `}
       id={id}
     >
       <img
@@ -17,7 +16,9 @@ const CategoryButton = ({ id, imgUrl, color, handleCategory, name }) => {
         height="40"
         className={`grow-large pl0`}
       />
-      <div className="f4 dark-gray fw6 self-center ttl ph0">{name}</div>
+      <div className="f4 fw6 self-center ttl ph0" id={id}>
+        {name}
+      </div>
     </div>
   );
 };

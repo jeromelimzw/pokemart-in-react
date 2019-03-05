@@ -8,7 +8,7 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className=" bg-near-white bw1 flex justify-between shadow-5">
+        <nav className=" bg-near-white bw1 flex justify-between  shadow-5">
           <div className="flex justify-between">
             <Link
               to="/home"
@@ -16,13 +16,11 @@ class NavBar extends Component {
             >
               p
               <img src="img/pokemart-logo.png" width="30" alt="o in Pokemart" />
-              ké
-              <i className="fab fa-mendeley" />
-              art
+              kémart
             </Link>
             <Link
               to="/home"
-              className="self-center f3 gray no-underline pa3 ph4"
+              className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
               activeClassName="bg-dark-gray white"
             >
               home
@@ -32,7 +30,7 @@ class NavBar extends Component {
           <div className="flex justify-between">
             <Link
               to="/checkout"
-              className="self-center f3 gray no-underline pa3 ph4"
+              className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
               activeClassName="bg-dark-gray white"
             >
               cart
@@ -41,7 +39,7 @@ class NavBar extends Component {
 
             <Link
               to="/exit"
-              className=" self-center f3 gray no-underline pa3 mr3"
+              className=" self-center f3 gray no-underline pa3 mr3 hover-bg-dark-gray hover-white"
               activeClassName="bg-dark-gray white"
             >
               sign-out
@@ -67,14 +65,11 @@ class NavBar extends Component {
               Privacy{" "}
             </a>{" "}
             /
-            <a
-              className="link white-80 hover-green"
-              href="https://github.com/jeromelimzw"
-            >
+            <a className="" href="https://github.com/jeromelimzw">
               <img
                 src="/img/github.png"
                 alt=""
-                className="br-100 grow"
+                className="br-100 dim"
                 width="50"
               />
             </a>

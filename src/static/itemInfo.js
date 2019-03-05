@@ -6,9 +6,9 @@ let items = [
       "A device for capturing wild Pokémon. It's thrown like a ball at a Pokémon, comfortably encapsulating its target.",
     price: 5,
     categoryId: "0001",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 32,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Balls/Poke_Ball.png"
@@ -20,9 +20,9 @@ let items = [
       "A good, high-performance Poké Ball that provides a higher catch rate than a standard Poké Ball.",
     price: 10,
     categoryId: "0001",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 43,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Balls/Great_Ball.png"
@@ -34,9 +34,9 @@ let items = [
       "An ultra-high performance Poké Ball that provides a higher Pokémon catch rate than a Great Ball.",
     price: 15,
     categoryId: "0001",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 23,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Balls/Ultra_Ball.png"
@@ -48,9 +48,9 @@ let items = [
       "A special type of Poké Ball for capturing a Raid Boss in Bonus Challenge after defeating it in Raid Battle.",
     price: 20,
     categoryId: "0001",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 12,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Balls/Premier_Ball.png"
@@ -62,9 +62,9 @@ let items = [
       "The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail.",
     price: 25,
     categoryId: "0001",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 1,
-    likes: 15,
+    likes: 48,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Balls/Master_Ball.png"
@@ -76,9 +76,9 @@ let items = [
       "A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use!",
     price: 500,
     categoryId: "0005",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 1,
-    likes: 15,
+    likes: 36,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Incubators/Egg_Incubator_Infinite.png"
@@ -90,9 +90,9 @@ let items = [
       "A more powerful Egg Incubator helps Eggs hatch quickly. Breaks after 3 uses.",
     price: 200,
     categoryId: "0005",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 27,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Incubators/Super_Incubator.png"
@@ -104,9 +104,9 @@ let items = [
       "A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses.",
     price: 150,
     categoryId: "0005",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 12,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Incubators/Incubator_Limited.png"
@@ -118,9 +118,9 @@ let items = [
       "A box that you can send to a friend. Contains a variety of useful items.",
     price: 30,
     categoryId: "0008",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 25,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Misc/Gift.png"
@@ -132,9 +132,9 @@ let items = [
       "Incense with a mysterious fragrance that lures wild Pokémon to your location for 30 minutes.",
     price: 80,
     categoryId: "0008",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 24,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Misc/Incense.png"
@@ -146,9 +146,9 @@ let items = [
       "A Lucky Egg that's filled with happiness! Earns double XP for 30 minutes.",
     price: 80,
     categoryId: "0008",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 25,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Misc/Lucky_Egg.png"
@@ -160,9 +160,9 @@ let items = [
       "A module that attracts Pokémon to a PokéStop for 30 min. The effect benefits other people nearby.",
     price: 100,
     categoryId: "0008",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 63,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Misc/Lure_Module.png"
@@ -173,9 +173,9 @@ let items = [
     description: "The Rare Candy can transform into Candy for any Pokémon.",
     price: 30,
     categoryId: "0008",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 42,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Misc/Rare_Candy.png"
@@ -187,9 +187,9 @@ let items = [
       "A small shard of a beautiful gem. Earns 50% more Stardust for 30 minutes.",
     price: 50,
     categoryId: "0008",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 29,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Misc/Star_Piece.png"
@@ -201,9 +201,9 @@ let items = [
       "EX Raid Pass to join a field test for a special Raid Battle. You can use this pass only at the specified limited-time event.",
     price: 50,
     categoryId: "0006",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 18,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Passes/EX_Raid_Pass.png"
@@ -214,9 +214,9 @@ let items = [
     description: "A Raid Pass can be used to join a Raid Battle.",
     price: 100,
     categoryId: "0006",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 25,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Passes/Premium_Raid_Pass.png"
@@ -228,9 +228,9 @@ let items = [
       "A ticket that allows you to participate in Raid Boss Battles.",
     price: 50,
     categoryId: "0006",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 5,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Passes/Raid_Pass.png"
@@ -242,9 +242,9 @@ let items = [
       "A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 20 points.",
     price: 5,
     categoryId: "0004",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 8,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Potions/Potion.png"
@@ -256,9 +256,9 @@ let items = [
       "A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 50 points.",
     price: 10,
     categoryId: "0004",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 9,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Potions/Super_Potion.png"
@@ -270,9 +270,9 @@ let items = [
       "A spray-type medicine for treating wounds. It restores the HP of one Pokémon by 200 points.",
     price: 15,
     categoryId: "0004",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 20,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Potions/Hyper_Potion.png"
@@ -284,9 +284,9 @@ let items = [
       "A spray-type medicine for treating wounds. It will completely restore the max HP of a single Pokémon.",
     price: 20,
     categoryId: "0004",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 21,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Potions/Max_Potion.png"
@@ -298,9 +298,9 @@ let items = [
       "A medicine that can revive fainted Pokémon. It also fully restores half of a fainted Pokémon's maximum HP.",
     price: 20,
     categoryId: "0003",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 41,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Revives/Revive.png"
@@ -312,9 +312,9 @@ let items = [
       "A medicine that can revive fainted Pokémon. It also fully restores a fainted Pokémon's maximum HP.",
     price: 30,
     categoryId: "0003",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 11,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Revives/Max_Revive.png"
@@ -326,9 +326,9 @@ let items = [
       "This item works like the Fast TM but it teaches the Charged Attack instead of a Fast Attack. ",
     price: 50,
     categoryId: "0007",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 28,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/TMs/Fast_TM.png"
@@ -340,9 +340,9 @@ let items = [
       "This Technical Machine item is used to teach your Pokémon a new Fast Attack. ",
     price: 50,
     categoryId: "0007",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 24,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/TMs/Charged_TM.png"
@@ -354,9 +354,9 @@ let items = [
       "Feed this to a Pokémon, and it will be easier to catch on your next throw.",
     price: 5,
     categoryId: "0002",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 6,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Berries/Razz_Berry.png"
@@ -365,11 +365,11 @@ let items = [
     _id: "7730b2eb-f479-451b-ad25-cf9819fb535f",
     name: "Pinap Berry",
     description: "Feed this to a Pokémon to make it drop more candy.",
-    price: 5,
+    price: 10,
     categoryId: "0002",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 12,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Berries/Pinap_Berry.png"
@@ -379,9 +379,9 @@ let items = [
     name: "Silver Pinap Berry",
     description:
       "Feed this to a Pokémon to receive more Candy when you catch it and make it easier to catch.",
-    price: 5,
+    price: 15,
     categoryId: "0002",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
     likes: 15,
     isLiked: false,
@@ -393,11 +393,11 @@ let items = [
     name: "Nanab Berry",
     description:
       "Feed this to a Pokémon to calm it down, making it less erratic.",
-    price: 5,
+    price: 10,
     categoryId: "0002",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 14,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Berries/Nanab_Berry.png"
@@ -407,11 +407,11 @@ let items = [
     name: "Golden Razz Berry",
     description:
       "Feed this to a wild Pokémon to make it much easier to catch. Feed this to a Pokémon on a Gym to fully restore its motivation.",
-    price: 5,
+    price: 15,
     categoryId: "0002",
-    qtyStock: 15,
+    qtyStock: 20,
     qtyCart: 0,
-    likes: 15,
+    likes: 35,
     isLiked: false,
     descriptionIsVisible: false,
     imgUrl: "img/Berries/Golden_Razz_Berry.png"
@@ -428,7 +428,7 @@ export function getCartItems() {
 
 export function toggleLikes(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.isLiked ? (target.likes -= 1) : (target.likes += 1);
+  target.isLiked ? target.likes-- : target.likes++;
   target.isLiked = !target.isLiked;
   return items;
 }
@@ -445,14 +445,13 @@ export function toggleDescription() {
 
 export function handleAddCart(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.qtyStock--;
-  target.qtyCart++;
+  target.qtyStock = target.qtyCart++;
   return items;
 }
 
 export function handleRemoveFromCart(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.qtyStock += target.qtyCart;
+  target.qtyStock = target.qtyCart;
   target.qtyCart = 0;
   return items;
 }

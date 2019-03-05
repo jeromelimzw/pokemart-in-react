@@ -2,12 +2,12 @@ import React from "react";
 
 const SearchBar = ({ handleSearch }) => {
   return (
-    <div className="mb4">
+    <div className="mb3 bg-white pb3 tc shadow-5">
       <div className="pv1 bg-gray white f3 pl3 tl fw3 mb2">search</div>
       <input
         type="searchbar"
-        placeholder="🔍 items here..."
-        className=" mt2 tc f4 bg-near-white w-90 shadow-5 dim "
+        placeholder="search here..."
+        className=" mt2 tc pv1 f4 bg-transparent  w-90 b--gray pointer"
         onChange={handleSearch}
       />
     </div>

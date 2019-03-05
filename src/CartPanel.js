@@ -20,7 +20,7 @@ const CartPanel = ({ items, handleRemove }) => {
           />
           <Link
             to="/checkout"
-            className="f5 shadow-5 hover-bg-light-green hover-dark-green tc grow self-center pointer ph4 pv1 white b--green bg-green no-underline"
+            className="f5  hover-bg-white hover-dark-green tc grow self-center pointer ph4 pv1 ba white b--green bg-green no-underline"
           >
             PROCEED TO CART
           </Link>
