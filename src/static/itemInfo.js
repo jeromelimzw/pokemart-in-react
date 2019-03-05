@@ -445,7 +445,8 @@ export function toggleDescription() {
 
 export function handleAddCart(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.qtyStock = target.qtyCart++;
+  target.qtyStock--;
+  target.qtyCart++;
   return items;
 }
 

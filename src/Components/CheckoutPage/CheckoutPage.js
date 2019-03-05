@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getCardInfo } from "./static/creditCardInfo";
-import { getCartItems, handlePayment } from "./static/itemInfo";
+import { getCardInfo } from "../../static/creditCardInfo";
+import { getCartItems, handlePayment } from "../../static/itemInfo";
 
 const CheckoutPage = props => {
   const makePayment = () => {

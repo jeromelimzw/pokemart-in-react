@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./HomePage";
 import ExitPage from "./Components/ExitPage/ExitPage";
-import CheckoutPage from "./CheckoutPage";
+import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
 
 class NavBar extends Component {
   render() {
@@ -28,6 +28,13 @@ class NavBar extends Component {
             </Link>
           </div>
           <div className="flex justify-between">
+            <Link
+              to="/exit"
+              className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
+              activeClassName="bg-dark-gray white"
+            >
+              <i className="fas fa-heart " />
+            </Link>
             <Link
               to="/checkout"
               className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
