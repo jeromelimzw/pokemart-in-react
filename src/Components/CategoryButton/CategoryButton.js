@@ -10,7 +10,7 @@ const CategoryButton = ({ id, imgUrl, color, handleCategory, name }) => {
     >
       <img
         src={imgUrl}
-        alt="category"
+        alt="category{id}"
         id={id}
         width="40"
         height="40"
