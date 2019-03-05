@@ -3,7 +3,7 @@ import React from "react";
 const CartCalc = ({ items, handleRemove }) => {
   const totalCost = items.reduce((a, b) => a + b.qtyCart * b.price, 0);
   return (
-    <div className="pv3 f5 ph1  animated fadeIn">
+    <div className="pv3 f6 ph1  animated fadeIn">
       <table className="tl w-100 h-25 fw6">
         <tbody>
           {items.map(a => {
@@ -35,7 +35,7 @@ const CartCalc = ({ items, handleRemove }) => {
                     <img src="img\PokéCoin.png" width="20" alt="" />
                   </td>
                   <td>sub-total:</td>
-                  <td colspan="2">{`\u20bd ${a.price * a.qtyCart} `}</td>
+                  <td>{`\u20bd ${a.price * a.qtyCart} `}</td>
                 </tr>
                 <tr>
                   <td colSpan="5">
@@ -46,10 +46,10 @@ const CartCalc = ({ items, handleRemove }) => {
             );
           })}
 
-          <tr className="f3">
-            <td />
+          <tr className="f4">
             <td>Total:</td>
-            <td colspan="2"> {`\u20bd ${totalCost}`}</td>
+            <td />
+            <td colSpan="2"> {`\u20bd ${totalCost}`}</td>
           </tr>
         </tbody>
       </table>

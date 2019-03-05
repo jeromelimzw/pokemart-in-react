@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import Item from "./Components/Item/Item";
 
 const ItemList = ({
   items,
@@ -23,7 +23,7 @@ const ItemList = ({
   const length = filteredItems.length;
 
   return (
-    <div className="w-70 center">
+    <div className="w-80 center">
       <span className=" f4 ml4">
         {length === 0
           ? `no items found ...  try expanding search criteria ...`

@@ -76,7 +76,8 @@ class HomePage extends Component {
       handleCategory,
       handleRemoveFromCart,
       handleSortBy,
-      toggleDescription
+      toggleDescription,
+      toggleLikes
     } = this;
     return (
       <div>

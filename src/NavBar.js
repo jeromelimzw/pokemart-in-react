@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./HomePage";
-import ExitPage from "./ExitPage";
+import ExitPage from "./Components/ExitPage/ExitPage";
 import CheckoutPage from "./CheckoutPage";
 
 class NavBar extends Component {
@@ -55,23 +55,28 @@ class NavBar extends Component {
           <Route path="/checkout" component={CheckoutPage} />
           <Redirect from="/" to="/home" />
         </Switch>
-        <footer class="bg-dark-gray white-80 pv4 mt3">
-          <p class="f4">
-            <span class="dib ml4 mr4">made in react</span>
-            <a class="link white-80 hover-light-purple" href="/terms">
+        <footer className="bg-dark-gray white-80 pv4 mt3">
+          <p className="f4">
+            <span className="dib ml4 mr4">made in react</span>
+            <a className="link white-80 hover-light-purple" href="/terms">
               Terms
             </a>{" "}
             /
-            <a class="link white-80 hover-gold" href="/privacy">
+            <a className="link white-80 hover-gold" href="/privacy">
               {" "}
               Privacy{" "}
             </a>{" "}
             /
             <a
-              class="link white-80 hover-green"
+              className="link white-80 hover-green"
               href="https://github.com/jeromelimzw"
             >
-              github
+              <img
+                src="/img/github.png"
+                alt=""
+                className="br-100 grow"
+                width="50"
+              />
             </a>
           </p>
         </footer>

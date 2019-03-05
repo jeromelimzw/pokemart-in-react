@@ -17,14 +17,14 @@ const Item = ({
 }) => {
   return (
     <div
-      className={` ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph3 animated fadeIn`}
+      className={` ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2 animated fadeIn`}
     >
       <h3 className={`f6 mb0 mt2 tc ttu ${color}`}>{category}</h3>
       <hr className="mt1 w-30 center" />
 
       <img
         src={imgUrl}
-        className="w-90 bg-light-gray ba br-100 b--moon-gray shadow-5 bw2 grow-large pointer ml1"
+        className="w-90 bg-light-gray ba br-100 b--moon-gray shadow-5 bw2 grow-large pointer"
         alt={name}
       />
 
@@ -54,10 +54,10 @@ const Item = ({
             </div>
           )}
         </div>
-        <div className="flex  fw6 mb1 items-end">
+        <div className="flex justify-between fw6 mb1">
           {qty !== 0 && (
             <button
-              className=" f4 br2 bg-near-white pointer flex justify-around shadow-5 pv1 ph2"
+              className=" f5 br2 bg-near-white pointer flex justify-around shadow-5 pv1 ph2"
               onClick={handleAddCart}
             >
               <strong className="self-center">{price}</strong>
@@ -68,8 +68,8 @@ const Item = ({
               />
             </button>
           )}
-          <div className="f5 gray pl3 center">{`${qty} left`}</div>
-          <div className="f4 self-center">
+          <div className="f5 gray ph3 center">{`${qty} left`}</div>
+          <div className="f5 self-center">
             <span>{likes}</span>
             <i
               className={`${

@@ -8,7 +8,7 @@ const CartPanel = ({ items, handleRemove }) => {
 
   return (
     <div className="w-25 h-50 bg-white tc shadow-5 animated fadeIn pb3">
-      <div className="pv1 bg-gray white f2 pl3 tl fw3 mb2">cart</div>
+      <div className="pv1 bg-gray white f3 pl3 tl fw3 mb2">cart</div>
       {totalInCart === 0 ? (
         <img src="img/empty-cart-png.png" className="mv6 " alt="empty-cart" />
       ) : (

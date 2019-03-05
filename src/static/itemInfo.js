@@ -428,7 +428,7 @@ export function getCartItems() {
 
 export function toggleLikes(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.isLiked ? target.likes-- : target.likes++;
+  target.isLiked ? (target.likes -= 1) : (target.likes += 1);
   target.isLiked = !target.isLiked;
   return items;
 }
