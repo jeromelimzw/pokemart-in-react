@@ -47,7 +47,7 @@ const CartCalc = ({ items, handleRemove }) => {
           })}
 
           <tr className="f4">
-            <td>Total:</td>
+            <td>total:</td>
             <td />
             <td colSpan="2"> {`\u20bd ${totalCost}`}</td>
           </tr>

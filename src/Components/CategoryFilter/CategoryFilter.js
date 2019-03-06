@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryButton from "./Components/CategoryButton/CategoryButton";
+import CategoryButton from "../CategoryButton/CategoryButton";
 
 const CategoryFilter = ({ categories, handleCategory }) => {
   return (

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ItemList from "./ItemList";
-import FilterAndSort from "./FilterAndSort";
+import ItemList from "./Components/ItemList/ItemList";
+import FilterAndSort from "./Components/FilterAndSort/FilterAndSort";
 import CartPanel from "./CartPanel";
 import {
   getItems,
@@ -10,7 +10,7 @@ import {
   toggleDescription
 } from "./static/itemInfo";
 import { getCategories } from "./static/categoryInfo";
-import CategoryFilter from "./CategoryFilter";
+import CategoryFilter from "./Components/CategoryFilter/CategoryFilter";
 
 class HomePage extends Component {
   constructor(props) {
