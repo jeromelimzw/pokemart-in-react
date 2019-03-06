@@ -1,6 +1,6 @@
 import React from "react";
-import SortByPanel from "./SortByPanel";
-import SearchBar from "./SearchBar";
+import SortByPanel from "../SortByPanel/SortByPanel";
+import SearchBar from "../SearchBar/SearchBar";
 
 const FilterAndSort = ({ handleSearch, handleSortBy }) => {
   return (

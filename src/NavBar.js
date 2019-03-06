@@ -24,7 +24,7 @@ class NavBar extends Component {
               activeClassName="bg-dark-gray white"
             >
               home
-              <i className="fas fa-home " />
+              <i className="fas fa-home ml2" />
             </Link>
           </div>
           <div className="flex justify-between">

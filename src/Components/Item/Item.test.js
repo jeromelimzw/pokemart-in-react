@@ -4,21 +4,21 @@ import React from "react";
 import { render } from "react-testing-library";
 import Item from "./Item";
 
-test("renders an item with an image, category, name, description, likes", () => {
-  const details = {
-    _id: "e01a8144-4b2d-483b-bffc-50131e259002",
-    name: "Master Ball",
-    description:
-      "The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail.",
-    price: 25,
-    category: "pokeball",
-    qtyStock: 13,
-    likes: 15,
-    isLiked: false,
-    descriptionIsVisible: true,
-    imgUrl: "img/Balls/Master_Ball.png"
-  };
+const details = {
+  _id: "e01a8144-4b2d-483b-bffc-50131e259002",
+  name: "Master Ball",
+  description:
+    "The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail.",
+  price: 25,
+  category: "pokeball",
+  qtyStock: 13,
+  likes: 15,
+  isLiked: false,
+  descriptionIsVisible: true,
+  imgUrl: "img/Balls/Master_Ball.png"
+};
 
+test("renders an item with an image, category, name, description, likes", () => {
   const { getByText, getByAltText } = render(
     <Item
       name={details.name}

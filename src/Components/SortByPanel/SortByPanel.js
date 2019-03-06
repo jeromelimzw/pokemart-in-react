@@ -1,5 +1,5 @@
 import React from "react";
-import sortOptions from "./static/sortingInfo";
+import sortOptions from "../../static/sortingInfo";
 
 const SortByPanel = ({ handleSortBy }) => {
   return (

@@ -452,7 +452,7 @@ export function handleAddCart(tarId) {
 
 export function handleRemoveFromCart(tarId) {
   const target = items.find(a => a._id === tarId);
-  target.qtyStock = target.qtyCart;
+  target.qtyStock += target.qtyCart;
   target.qtyCart = 0;
   return items;
 }
