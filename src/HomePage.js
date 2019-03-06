@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ItemList from "./Components/ItemList/ItemList";
 import FilterAndSort from "./Components/FilterAndSort/FilterAndSort";
-import CartPanel from "./CartPanel";
+import CartPanel from "./Components/CartPanel/CartPanel";
 import {
   getItems,
   toggleLikes,

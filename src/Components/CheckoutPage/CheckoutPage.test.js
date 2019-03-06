@@ -75,3 +75,15 @@ test("displays credit card options", () => {
 
   expect(getByText(/click to make payment/i)).toBeInTheDocument();
 });
+
+xtest("displays alert when credit card payment clicked", () => {
+  const history = createMemoryHistory({ initialEntries: ["/"] });
+  jest.spyOn(ItemInfo, "getCartItems").mockImplementation(() => sampleData);
+  const { getByText } = render(
+    <Router history={history}>
+      <CheckoutPage />
+    </Router>
+  );
+
+  expect(getByText(/click to make payment/i)).toBeInTheDocument();
+});

@@ -3,7 +3,7 @@ import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./HomePage";
 import ExitPage from "./Components/ExitPage/ExitPage";
 import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
-
+import Footer from "./Footer";
 class NavBar extends Component {
   render() {
     return (
@@ -29,13 +29,6 @@ class NavBar extends Component {
           </div>
           <div className="flex justify-between">
             <Link
-              to="/exit"
-              className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
-              activeClassName="bg-dark-gray white"
-            >
-              <i className="fas fa-heart " />
-            </Link>
-            <Link
               to="/checkout"
               className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
               activeClassName="bg-dark-gray white"
@@ -60,28 +53,7 @@ class NavBar extends Component {
           <Route path="/checkout" component={CheckoutPage} />
           <Redirect from="/" to="/home" />
         </Switch>
-        <footer className="bg-dark-gray white-80 pv4 mt3">
-          <p className="f4">
-            <span className="dib ml4 mr4">made in react</span>
-            <a className="link white-80 hover-light-purple" href="/terms">
-              Terms
-            </a>{" "}
-            /
-            <a className="link white-80 hover-gold" href="/privacy">
-              {" "}
-              Privacy{" "}
-            </a>{" "}
-            /
-            <a className="" href="https://github.com/jeromelimzw">
-              <img
-                src="/img/github.png"
-                alt=""
-                className="br-100 dim"
-                width="50"
-              />
-            </a>
-          </p>
-        </footer>
+        <Footer />
       </div>
     );
   }
