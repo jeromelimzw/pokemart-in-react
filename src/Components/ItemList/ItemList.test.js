@@ -50,14 +50,46 @@ const sampleData = [
 
 const sampleDataEmpty = [];
 
-const categories = [{ _id: "", color: "" }];
+const categories = [
+  {
+    _id: "0002",
+    name: "Berries",
+    imgUrl: "img/Berries/Razz_Berry.png",
+    color: "hot-pink"
+  },
+
+  {
+    _id: "0007",
+    name: "TMs",
+    imgUrl: "img/TMs/Fast_TM.png",
+    color: "green"
+  }
+];
 
 test("renders 3 item cards given item information ", () => {
-  const { getByText } = render(
-    <ItemList items={sampleData} searchfield="" categories={categories} />
+  const { getAllByText } = render(
+    <ItemList
+      items={sampleData}
+      categories={categories}
+      searchfield=""
+      categoryfilter=""
+      sorting=""
+    />
   );
 
-  expect(getByText(/left/i))
-    .length()
-    .toBe(3);
+  expect(getAllByText(/left/i).length).toBe(3);
+});
+
+test("renders message if no items given as input ", () => {
+  const { getByText } = render(
+    <ItemList
+      items={sampleDataEmpty}
+      categories={categories}
+      searchfield=""
+      categoryfilter=""
+      sorting=""
+    />
+  );
+
+  expect(getByText(/try expanding search criteria/i)).toBeInTheDocument();
 });
