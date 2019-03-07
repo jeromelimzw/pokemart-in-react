@@ -3,7 +3,7 @@ import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "./HomePage";
 import ExitPage from "./Components/ExitPage/ExitPage";
 import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
-import Footer from "./Footer";
+import Footer from "./Components/Footer/Footer";
 class NavBar extends Component {
   render() {
     return (

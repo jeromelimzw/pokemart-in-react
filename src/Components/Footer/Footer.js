@@ -15,7 +15,12 @@ const Footer = () => {
         </a>{" "}
         /
         <a className="" href="https://github.com/jeromelimzw">
-          <img src="/img/github.png" alt="" className="br-100 dim" width="50" />
+          <img
+            src="/img/github.png"
+            alt="github"
+            className="br-100 dim"
+            width="50"
+          />
         </a>
       </p>
     </footer>

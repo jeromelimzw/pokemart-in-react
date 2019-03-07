@@ -46,7 +46,7 @@ const Item = ({
             </React.Fragment>
           ) : (
             <div className="flex justify-between">
-              <span className="f4 fw7 mb2 ttl">{name}</span>
+              <span className="f4 fw7 mb2">{name}</span>
               <i
                 className="fas fa-plus-square f4 pointer"
                 onClick={toggleDescription}
