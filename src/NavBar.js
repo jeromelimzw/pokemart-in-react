@@ -23,6 +23,7 @@ class NavBar extends Component {
         <Sound
           url="mp3/Pokemart Theme.mp3"
           playStatus={isMusicOn ? Sound.status.PLAYING : Sound.status.PAUSED}
+          loop={true}
         />
         <nav className=" bg-near-white bw1 flex justify-between  shadow-5">
           <div className="flex justify-between">
