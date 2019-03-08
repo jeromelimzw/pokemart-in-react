@@ -4,10 +4,26 @@ import HomePage from "./HomePage";
 import ExitPage from "./Components/ExitPage/ExitPage";
 import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
 import Footer from "./Components/Footer/Footer";
+import Sound from "react-sound";
 class NavBar extends Component {
+  constructor() {
+    super();
+    this.state = { isMusicOn: true };
+  }
+
+  toggleMusic = () => {
+    this.setState({ isMusicOn: !this.state.isMusicOn });
+  };
+
   render() {
+    const { toggleMusic } = this;
+    const { isMusicOn } = this.state;
     return (
       <div>
+        <Sound
+          url="mp3/Pokemart Theme.mp3"
+          playStatus={isMusicOn ? Sound.status.PLAYING : Sound.status.PAUSED}
+        />
         <nav className=" bg-near-white bw1 flex justify-between  shadow-5">
           <div className="flex justify-between">
             <Link
@@ -28,6 +44,7 @@ class NavBar extends Component {
             </Link>
           </div>
           <div className="flex justify-between">
+            <i className={`fas fa-volume-${isMusicOn?'up':'off'} pointer self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white`} onClick={toggleMusic} />
             <Link
               to="/checkout"
               className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
