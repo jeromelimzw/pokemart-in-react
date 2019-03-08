@@ -44,7 +44,7 @@ class NavBar extends Component {
             </Link>
           </div>
           <div className="flex justify-between">
-            <i className={`fas fa-volume-${isMusicOn?'up':'off'} pointer self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white`} onClick={toggleMusic} />
+            <i className={`fas fa-volume-${isMusicOn?'up':'off'} pointer self-center f3 gray pa3 ph4`} onClick={toggleMusic} />
             <Link
               to="/checkout"
               className="self-center f3 gray no-underline pa3 ph4 hover-bg-dark-gray hover-white"
