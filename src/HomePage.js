@@ -11,7 +11,6 @@ import {
 } from "./static/itemInfo";
 import { getCategories } from "./static/categoryInfo";
 import CategoryFilter from "./Components/CategoryFilter/CategoryFilter";
-import Sound from 'react-sound'
 
 class HomePage extends Component {
   constructor(props) {
@@ -21,8 +20,7 @@ class HomePage extends Component {
       categories: [],
       searchfield: "",
       categoryfilter: "",
-      sorting: "",
-      isRegisterSoundOn: true
+      sorting: ""
     };
   }
 
@@ -70,8 +68,7 @@ class HomePage extends Component {
       items,
       searchfield,
       categoryfilter,
-      sorting,
-      isRegisterSoundOn
+      sorting
     } = this.state;
     const {
       handleSearch,
@@ -80,16 +77,10 @@ class HomePage extends Component {
       handleRemoveFromCart,
       handleSortBy,
       toggleDescription,
-      toggleLikes,
+      toggleLikes
     } = this;
     return (
       <div>
-         <Sound
-          url="mp3/cash-register.mp3"
-          playStatus={isRegisterSoundOn ? Sound.status.PLAYING : Sound.status.STOPPED}
-          volume='50'
-        />
-
         <CategoryFilter
           categories={categories}
           handleCategory={handleCategory}
