@@ -12,6 +12,7 @@ const SortByPanel = ({ handleSortBy }) => {
             key={a._id}
             onClick={handleSortBy}
             value={a.value}
+            placeholder={a.name}
           >
             <i className="fas fa-bars mr3" />
             {a.name}

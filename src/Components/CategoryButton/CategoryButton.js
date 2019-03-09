@@ -7,6 +7,7 @@ const CategoryButton = ({ id, imgUrl, color, handleCategory, name }) => {
       className={` w-20 bb bw2 bg-moon-gray dark-gray hover-bg-near-white b--${color} bw2 flex pointer ph2 shadow-5
       `}
       id={id}
+      placeholder={name}
     >
       <img
         src={imgUrl}

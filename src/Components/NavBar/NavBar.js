@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { NavLink as Link, Route, Switch, Redirect } from "react-router-dom";
-import HomePage from "./HomePage";
-import ExitPage from "./Components/ExitPage/ExitPage";
-import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
-import Footer from "./Components/Footer/Footer";
+import HomePage from "../HomePage/HomePage";
+import ExitPage from "../ExitPage/ExitPage";
+import CheckoutPage from "../CheckoutPage/CheckoutPage";
+import Footer from "../Footer/Footer";
 import Sound from "react-sound";
 class NavBar extends Component {
   constructor() {
@@ -50,6 +50,7 @@ class NavBar extends Component {
                 isMusicOn ? "up" : "off"
               } pointer self-center f3 gray pa3 ph4`}
               onClick={toggleMusic}
+              placeholder="volume-toggle"
             />
             <Link
               to="/checkout"

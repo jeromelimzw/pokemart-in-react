@@ -7,6 +7,6 @@ import Footer from "./Footer";
 test("displays footer text", () => {
   const { getByText, getByAltText } = render(<Footer />);
 
-  expect(getByText(/privacy/i)).toBeInTheDocument();
+  expect(getByText(/tachyons/i)).toBeInTheDocument();
   expect(getByAltText(/github/i)).toBeInTheDocument();
 });

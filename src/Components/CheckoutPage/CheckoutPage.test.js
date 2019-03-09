@@ -3,7 +3,7 @@ import "react-testing-library/cleanup-after-each";
 import React from "react";
 import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
-import { render } from "react-testing-library";
+import { render, fireEvent } from "react-testing-library";
 import * as ItemInfo from "../../static/itemInfo";
 import CheckoutPage from "./CheckoutPage";
 
@@ -85,5 +85,6 @@ xtest("displays alert when credit card payment clicked", () => {
     </Router>
   );
 
-  expect(getByText(/click to make payment/i)).toBeInTheDocument();
+  fireEvent.click(getByText(/home/i));
+  expect(getByText("PokeBalls")).toBeInTheDocument();
 });

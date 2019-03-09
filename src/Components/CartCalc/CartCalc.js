@@ -25,6 +25,7 @@ const CartCalc = ({ items, handleRemove }) => {
                     <i
                       className="far fa-times-circle pointer gray dim f3"
                       onClick={() => handleRemove(a._id)}
+                      placeholder={`remove-cart-${a.name}`}
                     />
                   </td>
                 </tr>

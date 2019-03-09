@@ -18,6 +18,7 @@ const Item = ({
   return (
     <div
       className={` ba bg-near-white b--${color} w-20 shadow-5 ma3 bw2 ph2 animated fadeIn`}
+      placeholder="cards-on-display"
     >
       <h3 className={`f6 mb0 mt2 tc ttu ${color}`}>{category}</h3>
       <hr className="mt1 w-30 center" />
@@ -50,6 +51,7 @@ const Item = ({
               <i
                 className="fas fa-plus-square f4 pointer"
                 onClick={toggleDescription}
+                placeholder="toggle-description"
               />
             </div>
           )}
@@ -59,6 +61,7 @@ const Item = ({
             <button
               className=" f5 br2 bg-near-white pointer flex justify-around shadow-5 pv1 ph2"
               onClick={handleAddCart}
+              placeholder={`add-cart-${name}`}
             >
               <strong className="self-center">{price}</strong>
               <img
@@ -76,6 +79,7 @@ const Item = ({
                 isLiked ? "fas" : "far"
               } fa-heart hover-red red pointer grow-large`}
               onClick={toggleLikes}
+              placeholder={`likes-toggle-${name}`}
             />
           </div>
         </div>

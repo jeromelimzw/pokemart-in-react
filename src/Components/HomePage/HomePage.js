@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import ItemList from "./Components/ItemList/ItemList";
-import FilterAndSort from "./Components/FilterAndSort/FilterAndSort";
-import CartPanel from "./Components/CartPanel/CartPanel";
+import ItemList from "../ItemList/ItemList";
+import FilterAndSort from "../FilterAndSort/FilterAndSort";
+import CartPanel from "../CartPanel/CartPanel";
 import {
   getItems,
   toggleLikes,
   handleAddCart,
   handleRemoveFromCart,
   toggleDescription
-} from "./static/itemInfo";
-import { getCategories } from "./static/categoryInfo";
-import CategoryFilter from "./Components/CategoryFilter/CategoryFilter";
+} from "../../static/itemInfo";
+import { getCategories } from "../../static/categoryInfo";
+import CategoryFilter from "../CategoryFilter/CategoryFilter";
 
 class HomePage extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class HomePage extends Component {
 
   handleAddCart = tarId => {
     const nextState = handleAddCart(tarId);
-    this.setState({ items: nextState, isRegisterSoundOn: true });
+    this.setState({ items: nextState });
   };
 
   handleRemoveFromCart = tarId => {
