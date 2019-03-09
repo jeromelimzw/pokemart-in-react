@@ -1,44 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Pokémart
 
-## Available Scripts
+Simple React Pokémart built with pure React
 
-In the project directory, you can run:
+Features and interactions include:
 
-### `npm start`
+1. Adding items to cart
+2. Turning soundtrack on / off
+3. Removing items from cart
+4. Liking items
+5. Viewing of total cost before confirming purchase
+6. Sorting and filtering of items by names, descriptions & categories
+   ... among others
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live Demo
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+[https://pokemart.netlify.com/home](https://pokemart.netlify.com/home)
 
-### `npm test`
+## Setup
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone repository into a local directory
 
-### `npm run build`
+```
+git clone https://github.com/jeromelimzw/pokemart-in-react/tree/internal-database
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open a git bash or command line tool in local folder and install dependencies
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Wait till installation is complete before starting app
 
-### `npm run eject`
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Project will be automatically opened at http://localhost:3000
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Thanks and Acknowlegements
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<img src='https://www.thoughtworks.com/imgs/tw-logo.png' width='250'/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+All credit goes to the instructors at ThoughtWorks JumpStart! Programme in Singapore.
 
-## Learn More
+## Copyright
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Pokémon and Pokémon-related items remain the sole copyright of The Pokémon Company.
