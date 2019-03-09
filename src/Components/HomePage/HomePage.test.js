@@ -173,9 +173,33 @@ test("number of likes increases when heart is pressed", () => {
   expect(getByText(/64/i)).toBeInTheDocument();
 });
 
-xtest("displays only 1 item of matching description when filtered by searchbar", () => {});
+xtest("displays only 1 item of matching description when filtered by searchbar", () => {
+  const { getByPlaceholderText, getByText } = render(
+    <Router history={history}>
+      <HomePage />
+    </Router>
+  );
 
-xtest("displays only 1 item of matching name when filtered by searchbar", () => {});
+  fireEvent.change(getByPlaceholderText(/search here/i), {
+    target: { value: "technical" }
+  });
+
+  expect(getByText(/fast/i)).toBeInTheDocument();
+});
+
+xtest("displays only 1 item of matching name when filtered by searchbar", () => {
+  const { getByPlaceholderText, getAllByPlaceholderText, getByText } = render(
+    <Router history={history}>
+      <HomePage />
+    </Router>
+  );
+
+  fireEvent.change(getByPlaceholderText(/search here/i), {
+    target: { value: [new File([""], "nanab", { type: "text" })] }
+  });
+  expect(getAllByPlaceholderText("cards-on-display").length).toEqual(1);
+  expect(getByText(/nanab/i)).toBeInTheDocument();
+});
 
 test("total price in cart is accurate when 2 items are bought", () => {
   const { getByPlaceholderText, getByText } = render(
